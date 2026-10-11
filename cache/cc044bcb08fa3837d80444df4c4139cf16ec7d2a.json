@@ -1,0 +1,1 @@
+{"value":{"domain":"example.com","count":1,"by_source":{"hackertarget":1},"subdomains":{"www.example.com":{"source":"hackertarget","ip":"104.20.23.154"}},"wordlist_tried":50},"ts":1791703229}
