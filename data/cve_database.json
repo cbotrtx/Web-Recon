@@ -1,0 +1,10 @@
+[
+  {"id":"CVE-2024-3400","title":"Palo Alto PAN-OS command injection (verify version)","severity":"critical","affected":"PAN-OS 10.x/11.x"},
+  {"id":"CVE-2023-46805","title":"Ivanti Connect Secure chain (auth bypass + RCE)","severity":"critical","affected":"Ivanti ICS/VPN"},
+  {"id":"CVE-2023-4966","title":"Citrix NetScaler buffer overflow (session hijack)","severity":"high","affected":"NetScaler ADC/Gateway"},
+  {"id":"CVE-2023-20198","title":"Cisco IOS XE privilege escalation via web UI","severity":"critical","affected":"IOS XE with web UI exposed"},
+  {"id":"CVE-2021-44228","title":"Log4Shell — check Java stacks/headers","severity":"critical","affected":"log4j 2.x < 2.17"},
+  {"id":"WP-ENUM","title":"WordPress user enumeration / xmlrpc exposed","severity":"medium","affected":"WordPress"},
+  {"id":"HDR-CLICKJACK","title":"Missing X-Frame-Options/CSP frame-ancestors","severity":"medium","affected":"any web app"},
+  {"id":"TLS-OLD","title":"TLS 1.0/1.1 or expired certificate","severity":"medium","affected":"TLS endpoints"}
+]

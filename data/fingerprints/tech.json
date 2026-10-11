@@ -1,0 +1,5 @@
+{
+  "cms": {"WordPress": ["wp-content","wp-json"], "Drupal": ["drupal.js"], "Joomla": ["com_content"]},
+  "frameworks": {"Next.js": ["_next/static"], "Laravel": ["laravel_session"], "Django": ["csrftoken"]},
+  "cdn": {"Cloudflare": ["cf-ray"], "Akamai": ["akamai"]}
+}
