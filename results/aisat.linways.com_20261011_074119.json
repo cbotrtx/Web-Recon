@@ -1,0 +1,317 @@
+{
+    "_meta": {
+        "target": "aisat.linways.com",
+        "scheme": "http",
+        "url": "http://aisat.linways.com",
+        "scan_type": "G",
+        "depth": "3",
+        "started": "2026-10-11 07:37:31",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-11 07:41:19",
+        "duration_s": 228
+    },
+    "dns": {
+        "domain": "aisat.linways.com",
+        "A": [
+            "172.66.159.177",
+            "104.20.40.25"
+        ],
+        "A_primary": "172.66.159.177",
+        "MX": [],
+        "NS": [],
+        "TXT": [],
+        "SOA": [],
+        "CNAME": [],
+        "AAAA": [],
+        "DoH_A": [
+            "172.66.159.177",
+            "104.20.40.25"
+        ]
+    },
+    "whois": {
+        "domain": "aisat.linways.com",
+        "rdap": "unavailable (code 0)",
+        "whois_snippet": "No match for \"AISAT.LINWAYS.COM\".\n>>> Last update of whois database: 2026-10-11T07:37:20Z <<<\n\nNOTICE: The expiration date displayed in this record is the date the\nregistrar's sponsorship of the domain name registration in the registry is\ncurrently set to expire. This date does not necessarily reflect the expiration\ndate of the domain name registrant's agreement with the sponsoring\nregistrar.  Users may consult the sponsoring registrar's Whois database to\nview the registrar's reported date of expiration for this registration.\n\nTERMS OF USE: You are not authorized to access or query our Whois\ndatabase through the use of electronic processes that are high-volume and\nautomated except as reasonably necessary to register domain names or\nmodify existing registrations; the Data in VeriSign Global Registry\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\ninformation purposes only, and to assist persons in obtaining information\nabout or related to a domain name registration record. VeriSign does not\nguarantee its accuracy. By submitting a Whois query, you agree to abide\nby the following terms of use: You agree that you may use this Data only\nfor lawful purposes and that under no circumstances will you use this Data\nto: (1) allow, enable, or otherwise support the transmission of mass\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\nor facsimile; or (2) enable high volume, automated, electronic processes\nthat apply to VeriSign (or its computer systems). The compilation,\nrepackaging, dissemination or other use of this Data is expressly\nprohibited without the prior written consent of VeriSign. You agree not to\nuse electronic processes that are automated and high-volume to access or\nquery the Whois database except as reasonably necessary to register\ndomain names or modify existing registrations. VeriSign reserves the right\nto restrict your access to the Whois database in its sole discretion to ensure\noperational stability.  VeriSign may restrict or terminate your access to the\nWhois database for failure to abide by these terms of use. VeriSign\nreserves the right to modify these terms at any time.\n\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\nRegistrars."
+    },
+    "geo": {
+        "ip": "104.20.40.25",
+        "hostname": "104.20.40.25",
+        "note": "geolocation unavailable"
+    },
+    "subdomain": {
+        "domain": "aisat.linways.com",
+        "count": 0,
+        "by_source": [],
+        "subdomains": [],
+        "wordlist_tried": 55
+    },
+    "ports": {
+        "host": "aisat.linways.com",
+        "ip": "172.66.159.177",
+        "ports_scanned": 95,
+        "open_count": 2,
+        "open": {
+            "80": {
+                "state": "open",
+                "service": "http",
+                "banner": "HTTP/1.1 403 Forbidden\r\nDate: Sun, 11 Oct 2026 07:38:34 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 17\r\nConnection: close\r\nCache-Control: private, max-age=0, no-store, no-cache, must"
+            },
+            "8080": {
+                "state": "open",
+                "service": "http-alt",
+                "banner": "HTTP/1.1 403 Forbidden\r\nDate: Sun, 11 Oct 2026 07:38:37 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 17\r\nConnection: close\r\nCache-Control: private, max-age=0, no-store, no-cache, must"
+            }
+        },
+        "closed_filtered": 93,
+        "os_hint": null
+    },
+    "tech": {
+        "url": "http://aisat.linways.com/",
+        "http_code": 0,
+        "detected": [],
+        "script_count": 0,
+        "script_srcs": []
+    },
+    "cms": {
+        "is_wordpress": false,
+        "note": "no WordPress fingerprints on homepage"
+    },
+    "ssl": {
+        "note": "target uses HTTP; no TLS to analyze",
+        "target": "aisat.linways.com"
+    },
+    "headers": {
+        "url": "http://aisat.linways.com/",
+        "http_code": 0,
+        "server": "unknown",
+        "powered_by": null,
+        "all_headers": [],
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "http://aisat.linways.com/"
+    },
+    "waf": {
+        "url": "http://aisat.linways.com/",
+        "suspected_waf": [],
+        "waf_likely": false,
+        "probe_blocked": false,
+        "probe_code": 0,
+        "server": "unknown"
+    },
+    "urls": {
+        "base": "http://aisat.linways.com",
+        "probed": 60,
+        "baseline_404_code": 0,
+        "interesting": [],
+        "count": 0
+    },
+    "api": {
+        "base": "http://aisat.linways.com",
+        "checked": 22,
+        "apis": [],
+        "count": 0,
+        "wayback_api_hints": []
+    },
+    "js": {
+        "page": "http://aisat.linways.com/",
+        "script_srcs_total": 0,
+        "scripts_analyzed": 0,
+        "potential_secrets": [],
+        "js_endpoints": [],
+        "secret_count": 0,
+        "endpoint_count": 0
+    },
+    "vuln": {
+        "target": "aisat.linways.com",
+        "finding_count": 10,
+        "findings": [
+            {
+                "id": "INFO-HEADERS",
+                "severity": "info",
+                "title": "Security headers reviewed in headers module",
+                "hint": "missing HSTS/CSP/X-Frame-Options increases XSS/clickjacking risk"
+            },
+            {
+                "id": "INFO-TLS",
+                "severity": "info",
+                "title": "TLS posture reviewed in ssl module",
+                "hint": "expired cert or TLS<1.2 is a finding"
+            },
+            {
+                "id": "CVE-2024-3400",
+                "severity": "critical",
+                "title": "Palo Alto PAN-OS command injection (verify version)",
+                "affected": "PAN-OS 10.x/11.x",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-46805",
+                "severity": "critical",
+                "title": "Ivanti Connect Secure chain (auth bypass + RCE)",
+                "affected": "Ivanti ICS/VPN",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-4966",
+                "severity": "high",
+                "title": "Citrix NetScaler buffer overflow (session hijack)",
+                "affected": "NetScaler ADC/Gateway",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-20198",
+                "severity": "critical",
+                "title": "Cisco IOS XE privilege escalation via web UI",
+                "affected": "IOS XE with web UI exposed",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2021-44228",
+                "severity": "critical",
+                "title": "Log4Shell \u2014 check Java stacks/headers",
+                "affected": "log4j 2.x < 2.17",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "WP-ENUM",
+                "severity": "medium",
+                "title": "WordPress user enumeration / xmlrpc exposed",
+                "affected": "WordPress",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "HDR-CLICKJACK",
+                "severity": "medium",
+                "title": "Missing X-Frame-Options/CSP frame-ancestors",
+                "affected": "any web app",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "TLS-OLD",
+                "severity": "medium",
+                "title": "TLS 1.0/1.1 or expired certificate",
+                "affected": "TLS endpoints",
+                "note": "verify manually \u2014 version-based heuristic only"
+            }
+        ],
+        "disclaimer": "Heuristic checks only. Confirm manually; no exploitation performed."
+    },
+    "breach": {
+        "domain": "aisat.linways.com",
+        "hibp_available": false,
+        "note": "No HIBP key. Set hibp_api_key in config/api_keys.php for email-breach lookups.",
+        "recommendations": [
+            "enforce 2FA",
+            "check corporate emails in HIBP",
+            "rotate creds found in JS/headers modules"
+        ],
+        "public_breach_sources": [
+            "https://haveibeenpwned.com",
+            "https://dehashed.com (paid)",
+            "https://leakcheck.io (paid)"
+        ]
+    },
+    "cloud": {
+        "keyword": "aisat",
+        "checked": 8,
+        "candidates": [],
+        "count": 0,
+        "hint": "403 = exists but private; 200+XML listing = PUBLIC \u2014 verify manually"
+    },
+    "os": {
+        "target": "aisat.linways.com",
+        "ip": "104.20.40.25",
+        "icmp_ttl": 55,
+        "tcp": {
+            "probed": [
+                22,
+                25,
+                110,
+                143,
+                445,
+                3389,
+                3306,
+                5432
+            ],
+            "responded": []
+        },
+        "http_server": "unknown",
+        "signals": [
+            "ICMP TTL=55 (near 64) => Linux/Unix-like (+2)",
+            "HTTP Server hidden behind CDN/proxy ('') \u2014 weak signal"
+        ],
+        "guesses": [
+            {
+                "os": "Linux/Unix-like",
+                "confidence": 95
+            }
+        ],
+        "best_guess": "Linux/Unix-like",
+        "disclaimer": "Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting."
+    },
+    "curl": {
+        "base": "http://aisat.linways.com/",
+        "redirect_chain": [
+            {
+                "url": "http://aisat.linways.com/",
+                "code": 301,
+                "server": "cloudflare",
+                "location": "https://aisat.linways.com/"
+            },
+            {
+                "url": "https://aisat.linways.com/",
+                "code": 200,
+                "server": "cloudflare"
+            }
+        ],
+        "redirect_count": 1,
+        "final_url": "https://aisat.linways.com/",
+        "https_downgrade": false,
+        "timing": {
+            "dns_lookup_s": 0.004,
+            "tcp_connect_s": 0.024,
+            "tls_handshake_s": 0,
+            "time_to_first_byte_s": 0.175,
+            "total_s": 0.175,
+            "download_bytes": 943,
+            "speed_bps": 5391,
+            "http_version": "2 (TLS)",
+            "primary_ip": "104.20.40.25",
+            "primary_port": 443
+        },
+        "methods": {
+            "OPTIONS": {
+                "code": 200
+            },
+            "HEAD": {
+                "code": 200
+            },
+            "TRACE": {
+                "code": 405
+            },
+            "PUT": {
+                "code": 200
+            },
+            "DELETE": {
+                "code": 200
+            }
+        },
+        "risky_methods_accepted": [
+            "PUT (200)",
+            "DELETE (200)"
+        ],
+        "note": "Review accepted methods \u2014 TRACE/PUT/DELETE can aid XSS, file overwrite or data tampering."
+    }
+}
