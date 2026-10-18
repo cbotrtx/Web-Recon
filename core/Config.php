@@ -1,0 +1,34 @@
+<?php
+/**
+ * Web-Recon: Runtime configuration holder
+ */
+class WR_Config {
+    private $data = [];
+    public function __construct(array $overrides = []) {
+        $defaults = [];
+        foreach ([__DIR__ . '/../config/settings.php', __DIR__ . '/../config/api_keys.php'] as $settingsFile) {
+            if (file_exists($settingsFile)) {
+                $s = include $settingsFile;
+                if (is_array($s)) $defaults = array_merge($defaults, $s);
+            }
+        }
+        $this->data = array_merge([
+            'timeout' => defined('WR_DEFAULT_TIMEOUT') ? WR_DEFAULT_TIMEOUT : 15,
+            'user_agent' => defined('WR_DEFAULT_UA') ? WR_DEFAULT_UA : 'Web-Recon/1.0',
+            'proxy' => null,
+            'verify_ssl' => false,
+            'follow_redirects' => true,
+            'cache_ttl' => 3600,
+            'depth' => '2',
+        ], $defaults, $overrides);
+        // Env overrides for API keys
+        foreach (['SHODAN_API_KEY','SECURITYTRAILS_API_KEY','WHOIS_API_KEY','HIBP_API_KEY'] as $k) {
+            $v = getenv($k);
+            if ($v) $this->data[strtolower($k)] = $v;
+        }
+        if (getenv('HIBP_API_KEY')) $this->data['hibp_api_key'] = getenv('HIBP_API_KEY');
+    }
+    public function get(string $key, $default = null) { return $this->data[$key] ?? $default; }
+    public function set(string $key, $value): void { $this->data[$key] = $value; }
+    public function all(): array { return $this->data; }
+}

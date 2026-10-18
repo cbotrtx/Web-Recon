@@ -1,0 +1,46 @@
+{
+    "_meta": {
+        "target": "example.com",
+        "scheme": "https",
+        "url": "https://example.com",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:26:06",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:26:07",
+        "duration_s": 1
+    },
+    "headers": {
+        "url": "https://example.com/",
+        "http_code": 200,
+        "server": "cloudflare",
+        "powered_by": null,
+        "all_headers": {
+            "date": "Sun, 18 Oct 2026 07:26:07 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "server": "cloudflare",
+            "last-modified": "Tue, 13 Oct 2026 20:08:28 GMT",
+            "allow": "GET, HEAD",
+            "age": "3878",
+            "cf-cache-status": "HIT",
+            "content-encoding": "br",
+            "cf-ray": "a4c5d01fbdc73405-MIA",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "https://example.com/"
+    }
+}

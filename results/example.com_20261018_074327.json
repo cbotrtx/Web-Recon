@@ -1,0 +1,60 @@
+{
+    "_meta": {
+        "target": "example.com",
+        "scheme": "https",
+        "url": "https://example.com",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:43:20",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:43:27",
+        "duration_s": 7
+    },
+    "title": {
+        "url": "https://example.com/",
+        "http_code": 200,
+        "title": "Example Domain"
+    },
+    "robots": {
+        "url": "https://example.com/robots.txt",
+        "http_code": 404,
+        "found": false,
+        "content": null,
+        "note": "robots.txt not found or empty"
+    },
+    "mx": {
+        "domain": "example.com",
+        "records": [
+            {
+                "priority": 0,
+                "host": "",
+                "ip": null
+            }
+        ],
+        "count": 1
+    },
+    "subnet": {
+        "target": "example.com",
+        "result": [
+            "Address       = 172.66.147.243",
+            "Network       = 172.66.147.243/32",
+            "Netmask       = 255.255.255.255",
+            "Broadcast     = 172.66.147.243",
+            "Wildcard Mask = 0.0.0.0",
+            "Hosts Bits    = 0",
+            "Max. Hosts    = 1",
+            "Host Range    = 172.66.147.244 - 172.66.147.242",
+            "IP Class      = B",
+            "CIDR Notation = 172.66.147.243/32",
+            "IP Version    = IPv4",
+            "Is Private    = No",
+            "DNS Hostname  = No hostname found"
+        ]
+    },
+    "crawler": {
+        "base": "https://example.com/",
+        "probed": 5,
+        "found_count": 0,
+        "found": []
+    }
+}

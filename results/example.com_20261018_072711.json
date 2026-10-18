@@ -1,0 +1,500 @@
+{
+    "_meta": {
+        "target": "example.com",
+        "scheme": "https",
+        "url": "https://example.com",
+        "scan_type": "G",
+        "depth": "1",
+        "started": "2026-10-18 07:26:16",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:27:11",
+        "duration_s": 55
+    },
+    "dns": {
+        "domain": "example.com",
+        "A": [
+            "172.66.147.243",
+            "104.20.23.154"
+        ],
+        "A_primary": "104.20.23.154",
+        "MX": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 112,
+                "type": "MX",
+                "pri": 0,
+                "target": ""
+            }
+        ],
+        "NS": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 5726,
+                "type": "NS",
+                "target": "hera.ns.cloudflare.com"
+            },
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 5726,
+                "type": "NS",
+                "target": "elliott.ns.cloudflare.com"
+            }
+        ],
+        "TXT": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 113,
+                "type": "TXT",
+                "txt": "v=spf1 -all",
+                "entries": [
+                    "v=spf1 -all"
+                ]
+            },
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 113,
+                "type": "TXT",
+                "txt": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
+                "entries": [
+                    "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+                ]
+            }
+        ],
+        "SOA": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 327,
+                "type": "SOA",
+                "mname": "elliott.ns.cloudflare.com",
+                "rname": "dns.cloudflare.com",
+                "serial": 2416374680,
+                "refresh": 10000,
+                "retry": 2400,
+                "expire": 604800,
+                "minimum-ttl": 1800
+            }
+        ],
+        "CNAME": [],
+        "AAAA": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 113,
+                "type": "AAAA",
+                "ipv6": "2606:4700:10::ac42:93f3"
+            },
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 113,
+                "type": "AAAA",
+                "ipv6": "2606:4700:10::6814:179a"
+            }
+        ],
+        "DoH_A": [
+            "172.66.147.243",
+            "104.20.23.154"
+        ]
+    },
+    "whois": {
+        "domain": "example.com",
+        "rdap_status": [
+            "client delete prohibited",
+            "client transfer prohibited",
+            "client update prohibited"
+        ],
+        "creation": "1995-08-14T04:00:00Z",
+        "updated": "2026-08-14T08:01:43Z",
+        "expiry": "2027-08-13T04:00:00Z",
+        "registrar": [
+            [
+                "version",
+                [],
+                "text",
+                "4.0"
+            ],
+            [
+                "fn",
+                [],
+                "text",
+                "RESERVED-Internet Assigned Numbers Authority"
+            ]
+        ],
+        "nameservers": [
+            "ELLIOTT.NS.CLOUDFLARE.COM",
+            "HERA.NS.CLOUDFLARE.COM"
+        ],
+        "raw_events": [
+            {
+                "eventAction": "registration",
+                "eventDate": "1995-08-14T04:00:00Z"
+            },
+            {
+                "eventAction": "expiration",
+                "eventDate": "2027-08-13T04:00:00Z"
+            },
+            {
+                "eventAction": "last changed",
+                "eventDate": "2026-08-14T08:01:43Z"
+            },
+            {
+                "eventAction": "last update of RDAP database",
+                "eventDate": "2026-10-18T07:01:43Z"
+            }
+        ],
+        "whois_snippet": "Domain Name: EXAMPLE.COM\n   Registry Domain ID: 2336799_DOMAIN_COM-VRSN\n   Registrar WHOIS Server: whois.iana.org\n   Registrar URL: http://res-dom.iana.org\n   Updated Date: 2026-08-14T08:01:43Z\n   Creation Date: 1995-08-14T04:00:00Z\n   Registry Expiry Date: 2027-08-13T04:00:00Z\n   Registrar: RESERVED-Internet Assigned Numbers Authority\n   Registrar IANA ID: 376\n   Registrar Abuse Contact Email:\n   Registrar Abuse Contact Phone:\n   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited\n   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\n   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited\n   Name Server: ELLIOTT.NS.CLOUDFLARE.COM\n   Name Server: HERA.NS.CLOUDFLARE.COM\n   DNSSEC: signedDelegation\n   DNSSEC DS Data: 2371 13 2 C988EC423E3880EB8DD8A46FE06CA230EE23F35B578D64E78B29C3E1C83D245A\n   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/\n>>> Last update of whois database: 2026-10-18T07:01:43Z <<<\n\nFor more information on Whois status codes, please visit https://icann.org/epp\n\nNOTICE: The expiration date displayed in this record is the date the\nregistrar's sponsorship of the domain name registration in the registry is\ncurrently set to expire. This date does not necessarily reflect the expiration\ndate of the domain name registrant's agreement with the sponsoring\nregistrar.  Users may consult the sponsoring registrar's Whois database to\nview the registrar's reported date of expiration for this registration.\n\nTERMS OF USE: You are not authorized to access or query our Whois\ndatabase through the use of electronic processes that are high-volume and\nautomated except as reasonably necessary to register domain names or\nmodify existing registrations; the Data in VeriSign Global Registry\nServices' (\"VeriSign\") Whois database is provided by VeriSign for\ninformation purposes only, and to assist persons in obtaining information\nabout or related to a domain name registration record. VeriSign does not\nguarantee its accuracy. By submitting a Whois query, you agree to abide\nby the following terms of use: You agree that you may use this Data only\nfor lawful purposes and that under no circumstances will you use this Data\nto: (1) allow, enable, or otherwise support the transmission of mass\nunsolicited, commercial advertising or solicitations via e-mail, telephone,\nor facsimile; or (2) enable high volume, automated, electronic processes\nthat apply to VeriSign (or its computer systems). The compilation,\nrepackaging, dissemination or other use of this Data is expressly\nprohibited without the prior written consent of VeriSign. You agree not to\nuse electronic processes that are automated and high-volume to access or\nquery the Whois database except as reasonably necessary to register\ndomain names or modify existing registrations. VeriSign reserves the right\nto restrict your access to the Whois database in its sole discretion to ensure\noperational stability.  VeriSign may restrict or terminate your access to the\nWhois database for failure to abide by these terms of use. VeriSign\nreserves the right to modify these terms at any time.\n\nThe Registry database contains ONLY .COM, .NET, .EDU domains and\nRegistrars.\n% IANA WHOIS server\n% for more information on IANA, visit http://www.iana.org\n% This query returned 1 object"
+    },
+    "geo": {
+        "ip": "104.20.23.154",
+        "hostname": "104.20.23.154",
+        "status": "success",
+        "country": "Canada",
+        "regionName": "Ontario",
+        "city": "Toronto",
+        "zip": "M5A",
+        "lat": 43.6532,
+        "lon": -79.3832,
+        "timezone": "America/Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "as": "AS13335 Cloudflare, Inc.",
+        "query": "104.20.23.154"
+    },
+    "subdomain": {
+        "domain": "example.com",
+        "count": 2,
+        "by_source": {
+            "hackertarget": 2
+        },
+        "subdomains": {
+            "example.com": {
+                "source": "hackertarget",
+                "ip": "104.20.23.154"
+            },
+            "www.example.com": {
+                "source": "hackertarget",
+                "ip": "172.66.147.243"
+            }
+        },
+        "wordlist_tried": 50
+    },
+    "ports": {
+        "host": "example.com",
+        "ip": "172.66.147.243",
+        "ports_scanned": 20,
+        "open_count": 1,
+        "open": {
+            "8080": {
+                "state": "open",
+                "service": "http-alt",
+                "banner": "HTTP/1.1 403 Forbidden\r\nDate: Sun, 18 Oct 2026 07:26:21 GMT\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Length: 17\r\nConnection: close\r\nCache-Control: private, max-age=0, no-store, no-cache, must"
+            }
+        },
+        "closed_filtered": 19,
+        "os_hint": null
+    },
+    "tech": {
+        "url": "https://example.com/",
+        "http_code": 200,
+        "web_server": "cloudflare",
+        "detected": [
+            "Cloudflare"
+        ],
+        "script_count": 0
+    },
+    "cms": {
+        "is_wordpress": false,
+        "note": "no WordPress fingerprints on homepage"
+    },
+    "ssl": {
+        "host": "example.com",
+        "port": 443,
+        "reachable": true,
+        "subject": {
+            "CN": "example.com"
+        },
+        "issuer": {
+            "C": "US",
+            "O": "SSL Corporation",
+            "CN": "Cloudflare TLS Issuing ECC CA 3"
+        },
+        "valid_from": "2026-09-26 22:49:11",
+        "valid_to": "2026-12-25 22:56:35",
+        "days_left": 68,
+        "expired": false,
+        "expiring_soon": false,
+        "san": [
+            "DNS:example.com",
+            "DNS:*.example.com"
+        ],
+        "signature": "ecdsa-with-SHA256",
+        "protocols": {
+            "note": "skipped (quick scan)"
+        }
+    },
+    "headers": {
+        "url": "https://example.com/",
+        "http_code": 200,
+        "server": "cloudflare",
+        "powered_by": null,
+        "all_headers": {
+            "date": "Sun, 18 Oct 2026 07:26:24 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "server": "cloudflare",
+            "last-modified": "Tue, 13 Oct 2026 20:08:28 GMT",
+            "allow": "GET, HEAD",
+            "age": "3895",
+            "cf-cache-status": "HIT",
+            "content-encoding": "br",
+            "cf-ray": "a4c5d08cbcfb3cea-MIA",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "https://example.com/"
+    },
+    "waf": {
+        "url": "https://example.com/",
+        "suspected_waf": [
+            "Cloudflare"
+        ],
+        "waf_likely": true,
+        "probe_blocked": false,
+        "probe_code": 200,
+        "server": "cloudflare"
+    },
+    "urls": {
+        "base": "https://example.com",
+        "probed": 40,
+        "baseline_404_code": 404,
+        "interesting": [],
+        "count": 0
+    },
+    "api": {
+        "base": "https://example.com",
+        "checked": 22,
+        "apis": [],
+        "count": 0,
+        "wayback_api_hints": [
+            "http://www.example.com:80/api/",
+            "https://example.com/api%22",
+            "https://example.com/api$%7Bpath%7D",
+            "http://example.com/api%20POST%20key1=value1&amp;key2=value2",
+            "https://example.com/api%C2%A0",
+            "https://www.example.com/api%D0%92",
+            "https://example.com/api%E2%80%99",
+            "https://example.com/api%E2%80%99req",
+            "https://example.com/api%E2%80%99req%20=%20urllib.request.Request(URL)%20with%20urllib.request.urlopen(req)%20as%20res:data%20=%20res.read()%20",
+            "https://example.com/api%E2%80%99req%20=%20urllib.request.Request(URL)with%20urllib.request.urlopen(req)%20as%20res:data%20=%20res.read()",
+            "http://www.example.com/api%E2%80%9C/",
+            "https://www.example.com/api%E2%80%9D",
+            "http://www.example.com/api%E3%80%82",
+            "http://www.example.com/api%E3%80%82options.method",
+            "http://example.com/api%E3%81%93%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83.%E3.%BF%E3%83.%E3%81.%EF..%E3%83%97%E3%83%AC%E3%83.%E3.%B9%E3%83%9B%E3%83%AB%E3%83%80%E3%83.%E3.%92%E3.%B5%E3%83%9D%E3%83.%E3%83.%E3%81%97%E3%81%A6%E3%81%84",
+            "http://example.com/api%E3%81%93%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83.%E3.%BF%E3%83.%E3%81.%EF..%E3%83%97%E3%83%AC%E3%83.%E3.%B9%E3%83%9B%E3%83%AB%E3%83%80%E3%83.%E3.%92%E3.%B5%E3%83%9D%E3%83.%E3%83.%E3%81%97%E3%81%A6%E3%81%84%E3.%8B%E3%81%9F%E3.%81%EF..%E6%99.%E9%96%93%EF..%E3.%BF%E3.%B0%EF..%E3%81%8A%E3..%E3%81%B3%E3%83%AC%E3.%B3%E3%83.%E3%83%89%E3%83%95%E3.%A3%E3%83.%E3%83%AB%E3%83%89%E3.%92%E5%9F%8B%E3.%81%E8%BE",
+            "https://example.com/api%E3%81%93%E3%81%AE%E3%83%91%E3%83%A9%E3%83%A1%E3%83.%E3.%BF%E3%83.%E3%81.%EF..%E3%83%97%E3%83%AC%E3%83.%E3.%B9%E3%83%9B%E3%83%AB%E3%83%80%E3%83.%E3.%92%E3.%B5%E3%83%9D%E3%83.%E3%83.%E3%81%97%E3%81%A6%E3%81%84%E3.%8B%E3%81%9F%E3.%81%EF..%E6%99.%E9%96%93%EF..%E3.%BF%E3.%B0%EF..%E3%81%8A%E3..%E3%81%B3%E3%83%AC%E3.%B3%E3%83.%E3%83%89%E3%83%95%E3.%A3%E3%83.%E3%83%AB%E3%83%89%E3.%92%E5%9F%8B%E3.%81%E8%BE.%E3.%80%E3%81%93%E3%81%A8%E3%81.%E3%81%A7%E3%81.%E3%81%BE%E3%81%99%E3%80.%E3%83%97%E3%83%AC%E3%83.%E3.%B9%E3%83%9B%E3%83%AB%E3%83%80%E3%83.%E3%81.%E6%A9%9F%E8%83%BD%E3%81%99%E3.%8B%E3%81%AB%E3%81.%EF",
+            "http://www.example.com/api%E3%83%BB%E3%83%BB%E3%83%BB/users/0001/0002GET",
+            "https://www.example.com/api%E3%83%BB%E3%83%BB%E3%83%BB/users/0001/0002URI%E3%81%AF%E5%90%8D%E8%A9%9E%E3%81%AE%E3%81%BF%E3%81%A7%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B%E3%83%AA%E3%82.%E3%83%BC%E3%82%B9%E6%AF%8E%E3%81%ABURI%E3%82%92%E5%88%86%E3%81%91%E3%82%8B",
+            "http://www.example.com/api%EF%BC%89%E3%81%AB%E3%82%A2%E3%82%AF"
+        ]
+    },
+    "js": {
+        "page": "https://example.com/",
+        "script_srcs_total": 0,
+        "scripts_analyzed": 0,
+        "potential_secrets": [],
+        "js_endpoints": [],
+        "secret_count": 0,
+        "endpoint_count": 0
+    },
+    "vuln": {
+        "target": "example.com",
+        "finding_count": 7,
+        "findings": [
+            {
+                "id": "INFO-HEADERS",
+                "severity": "info",
+                "title": "Security headers reviewed in headers module",
+                "hint": "missing HSTS/CSP/X-Frame-Options increases XSS/clickjacking risk"
+            },
+            {
+                "id": "INFO-TLS",
+                "severity": "info",
+                "title": "TLS posture reviewed in ssl module",
+                "hint": "expired cert or TLS<1.2 is a finding"
+            },
+            {
+                "id": "CVE-2024-3400",
+                "severity": "critical",
+                "title": "Palo Alto PAN-OS command injection (verify version)",
+                "affected": "PAN-OS 10.x/11.x",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-46805",
+                "severity": "critical",
+                "title": "Ivanti Connect Secure chain (auth bypass + RCE)",
+                "affected": "Ivanti ICS/VPN",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-4966",
+                "severity": "high",
+                "title": "Citrix NetScaler buffer overflow (session hijack)",
+                "affected": "NetScaler ADC/Gateway",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-20198",
+                "severity": "critical",
+                "title": "Cisco IOS XE privilege escalation via web UI",
+                "affected": "IOS XE with web UI exposed",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2021-44228",
+                "severity": "critical",
+                "title": "Log4Shell \u2014 check Java stacks/headers",
+                "affected": "log4j 2.x < 2.17",
+                "note": "verify manually \u2014 version-based heuristic only"
+            }
+        ],
+        "disclaimer": "Heuristic checks only. Confirm manually; no exploitation performed."
+    },
+    "breach": {
+        "domain": "example.com",
+        "hibp_available": false,
+        "note": "No HIBP key. Set hibp_api_key in config/api_keys.php for email-breach lookups.",
+        "recommendations": [
+            "enforce 2FA",
+            "check corporate emails in HIBP",
+            "rotate creds found in JS/headers modules"
+        ],
+        "public_breach_sources": [
+            "https://haveibeenpwned.com",
+            "https://dehashed.com (paid)",
+            "https://leakcheck.io (paid)"
+        ]
+    },
+    "cloud": {
+        "keyword": "example",
+        "checked": 8,
+        "candidates": [
+            {
+                "url": "https://example.s3.amazonaws.com",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://s3.amazonaws.com/example",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://example.storage.googleapis.com",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://storage.googleapis.com/example",
+                "code": 403,
+                "possibly_exposed": false
+            }
+        ],
+        "count": 4,
+        "hint": "403 = exists but private; 200+XML listing = PUBLIC \u2014 verify manually"
+    },
+    "os": {
+        "target": "example.com",
+        "ip": "172.66.147.243",
+        "icmp_ttl": 57,
+        "tcp": {
+            "probed": [
+                22,
+                25,
+                110,
+                143,
+                445,
+                3389,
+                3306,
+                5432
+            ],
+            "responded": []
+        },
+        "http_server": "cloudflare",
+        "signals": [
+            "ICMP TTL=57 (near 64) => Linux/Unix-like (+2)",
+            "HTTP Server hidden behind CDN/proxy ('cloudflare') \u2014 weak signal"
+        ],
+        "guesses": [
+            {
+                "os": "Linux/Unix-like",
+                "confidence": 95
+            }
+        ],
+        "best_guess": "Linux/Unix-like",
+        "disclaimer": "Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting."
+    },
+    "curl": {
+        "base": "https://example.com/",
+        "redirect_chain": [
+            {
+                "url": "https://example.com/",
+                "code": 200,
+                "server": "cloudflare"
+            }
+        ],
+        "redirect_count": 0,
+        "final_url": "https://example.com/",
+        "https_downgrade": false,
+        "timing": {
+            "dns_lookup_s": 0.001,
+            "tcp_connect_s": 0.48,
+            "tls_handshake_s": 0,
+            "time_to_first_byte_s": 1.408,
+            "total_s": 1.408,
+            "download_bytes": 334,
+            "speed_bps": 237,
+            "http_version": "2 (TLS)",
+            "primary_ip": "104.20.23.154",
+            "primary_port": 443
+        },
+        "methods": {
+            "OPTIONS": {
+                "code": 405
+            },
+            "HEAD": {
+                "code": 200
+            },
+            "TRACE": {
+                "code": 405
+            },
+            "PUT": {
+                "code": 405
+            },
+            "DELETE": {
+                "code": 405
+            }
+        },
+        "risky_methods_accepted": [],
+        "note": "No risky HTTP methods accepted on the probed URL."
+    }
+}

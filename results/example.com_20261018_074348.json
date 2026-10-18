@@ -1,0 +1,18 @@
+{
+    "_meta": {
+        "target": "example.com",
+        "scheme": "https",
+        "url": "https://example.com",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:43:38",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:43:48",
+        "duration_s": 10
+    },
+    "nmap": {
+        "target": "example.com",
+        "command": "timeout 180 nmap -F -Pn 'example.com' 2>&1",
+        "raw": "Starting Nmap 7.98 ( https://nmap.org ) at 2026-10-18 13:13 +0530\nNmap scan report for example.com (104.20.23.154)\nHost is up (0.35s latency).\nOther addresses for example.com (not scanned): 172.66.147.243 2606:4700:10::ac42:93f3 2606:4700:10::6814:179a\nNot shown: 98 filtered tcp ports (no-response)\nPORT     STATE SERVICE\n443/tcp  open  https\n8080/tcp open  http-proxy\n\nNmap done: 1 IP address (1 host up) scanned in 10.19 seconds"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "_meta": {
+        "target": "lab.hdna.me",
+        "scheme": "https",
+        "url": "https://lab.hdna.me",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 08:07:56",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 08:08:00",
+        "duration_s": 4
+    },
+    "headers": {
+        "url": "https://lab.hdna.me/",
+        "http_code": 404,
+        "server": "cloudflare",
+        "powered_by": null,
+        "all_headers": {
+            "date": "Sun, 18 Oct 2026 08:07:57 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "x-amz-request-id": "APZXXAJNNSG6AMTC",
+            "x-amz-id-2": "ay8ACJgbmXTSX5aPDlPqSL70e52qdczpR4xfB8FYCMDYPBQvINq9AC5sMdshj6dCRHoVHatIDT8H/xXjpcbNt34a/oLF4KkE",
+            "server": "cloudflare",
+            "cf-cache-status": "DYNAMIC",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=5MLJ9%2FtW00YHYdocJIS8zCM8IdSOVgTwqnsYZNDDWnc3Vtjwf7kfPMSPweZ7YnJbtvUzmJFEoGSltE4IpQiWl%2BG%2FrCob%2BiQhKoEuvvYPeocAiCrPKK4CpfExGLj7qQ%3D%3D\"}]}",
+            "content-encoding": "zstd",
+            "cf-ray": "a4c60d689b94fdc9-MIA",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "https://lab.hdna.me/"
+    },
+    "tech": {
+        "url": "https://lab.hdna.me/",
+        "http_code": 404,
+        "web_server": "cloudflare",
+        "detected": [
+            "Cloudflare"
+        ],
+        "script_count": 0
+    },
+    "title": {
+        "url": "https://lab.hdna.me/",
+        "http_code": 404,
+        "title": "404 Not Found"
+    }
+}

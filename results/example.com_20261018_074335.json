@@ -1,0 +1,30 @@
+{
+    "_meta": {
+        "target": "example.com",
+        "scheme": "https",
+        "url": "https://example.com",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:43:32",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:43:35",
+        "duration_s": 3
+    },
+    "sqli": {
+        "base": "https://example.com/",
+        "tested": 0,
+        "vulnerable_count": 0,
+        "vulnerable": []
+    },
+    "bloggers": {
+        "url": "https://example.com/",
+        "http_code": 200,
+        "title": "Example Domain",
+        "alexa_rank": null,
+        "moz": {
+            "note": "Moz API keys not configured"
+        },
+        "social_links": [],
+        "link_count": 0
+    }
+}

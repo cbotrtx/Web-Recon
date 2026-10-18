@@ -1,0 +1,123 @@
+{
+    "_meta": {
+        "target": "127.0.0.1",
+        "scheme": "http",
+        "url": "http://127.0.0.1",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:05:43",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:05:44",
+        "duration_s": 1
+    },
+    "ports": {
+        "host": "127.0.0.1",
+        "ip": "127.0.0.1",
+        "ports_scanned": 20,
+        "open_count": 20,
+        "open": {
+            "21": {
+                "state": "open",
+                "service": "ftp",
+                "banner": ""
+            },
+            "22": {
+                "state": "open",
+                "service": "ssh",
+                "banner": ""
+            },
+            "23": {
+                "state": "open",
+                "service": "telnet",
+                "banner": ""
+            },
+            "25": {
+                "state": "open",
+                "service": "smtp",
+                "banner": ""
+            },
+            "53": {
+                "state": "open",
+                "service": "dns",
+                "banner": ""
+            },
+            "80": {
+                "state": "open",
+                "service": "http",
+                "banner": "HTTP/1.1 200 OK\r\nDate: Sun, 18 Oct 2026 07:05:44 GMT\r\nServer: Apache/2.4.66 (Ubuntu)\r\nLast-Modified: Wed, 30 Sep 2026 19:21:49 GMT\r\nETag: \"29b0-65cb835f5fdf5\"\r\nAccept-Ranges: bytes\r\nContent-Length: 10"
+            },
+            "110": {
+                "state": "open",
+                "service": "pop3",
+                "banner": ""
+            },
+            "111": {
+                "state": "open",
+                "service": "rpcbind",
+                "banner": ""
+            },
+            "135": {
+                "state": "open",
+                "service": "msrpc",
+                "banner": ""
+            },
+            "139": {
+                "state": "open",
+                "service": "netbios",
+                "banner": ""
+            },
+            "143": {
+                "state": "open",
+                "service": "imap",
+                "banner": ""
+            },
+            "443": {
+                "state": "open",
+                "service": "https",
+                "banner": ""
+            },
+            "445": {
+                "state": "open",
+                "service": "smb",
+                "banner": ""
+            },
+            "993": {
+                "state": "open",
+                "service": "imaps",
+                "banner": ""
+            },
+            "995": {
+                "state": "open",
+                "service": "pop3s",
+                "banner": ""
+            },
+            "1723": {
+                "state": "open",
+                "service": "pptp",
+                "banner": ""
+            },
+            "3306": {
+                "state": "open",
+                "service": "mysql",
+                "banner": ""
+            },
+            "3389": {
+                "state": "open",
+                "service": "rdp",
+                "banner": ""
+            },
+            "5900": {
+                "state": "open",
+                "service": "vnc",
+                "banner": ""
+            },
+            "8080": {
+                "state": "open",
+                "service": "http-alt",
+                "banner": ""
+            }
+        },
+        "closed_filtered": 0,
+        "os_hint": "Windows (RDP open)"
+    }
+}

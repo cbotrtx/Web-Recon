@@ -1,0 +1,149 @@
+{
+    "_meta": {
+        "target": "example.com",
+        "scheme": "https",
+        "url": "https://example.com",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:01:34",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:01:45",
+        "duration_s": 11
+    },
+    "curl": {
+        "base": "https://example.com/",
+        "redirect_chain": [
+            {
+                "url": "https://example.com/",
+                "code": 200,
+                "server": "cloudflare"
+            }
+        ],
+        "redirect_count": 0,
+        "final_url": "https://example.com/",
+        "https_downgrade": false,
+        "timing": {
+            "dns_lookup_s": 0.001,
+            "tcp_connect_s": 0.482,
+            "tls_handshake_s": 0,
+            "time_to_first_byte_s": 1.052,
+            "total_s": 1.054,
+            "download_bytes": 334,
+            "speed_bps": 316,
+            "http_version": "2 (TLS)",
+            "primary_ip": "104.20.23.154",
+            "primary_port": 443
+        },
+        "methods": {
+            "OPTIONS": {
+                "code": 405
+            },
+            "HEAD": {
+                "code": 200
+            },
+            "TRACE": {
+                "code": 405
+            },
+            "PUT": {
+                "code": 405
+            },
+            "DELETE": {
+                "code": 405
+            }
+        },
+        "risky_methods_accepted": [],
+        "note": "No risky HTTP methods accepted on the probed URL."
+    },
+    "dns": {
+        "domain": "example.com",
+        "A": [
+            "104.20.23.154",
+            "172.66.147.243"
+        ],
+        "A_primary": "172.66.147.243",
+        "MX": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 300,
+                "type": "MX",
+                "pri": 0,
+                "target": ""
+            }
+        ],
+        "NS": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 86400,
+                "type": "NS",
+                "target": "elliott.ns.cloudflare.com"
+            },
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 86400,
+                "type": "NS",
+                "target": "hera.ns.cloudflare.com"
+            }
+        ],
+        "TXT": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 300,
+                "type": "TXT",
+                "txt": "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9",
+                "entries": [
+                    "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+                ]
+            },
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 300,
+                "type": "TXT",
+                "txt": "v=spf1 -all",
+                "entries": [
+                    "v=spf1 -all"
+                ]
+            }
+        ],
+        "SOA": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 1800,
+                "type": "SOA",
+                "mname": "elliott.ns.cloudflare.com",
+                "rname": "dns.cloudflare.com",
+                "serial": 2416374680,
+                "refresh": 10000,
+                "retry": 2400,
+                "expire": 604800,
+                "minimum-ttl": 1800
+            }
+        ],
+        "CNAME": [],
+        "AAAA": [
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 290,
+                "type": "AAAA",
+                "ipv6": "2606:4700:10::ac42:93f3"
+            },
+            {
+                "host": "example.com",
+                "class": "IN",
+                "ttl": 290,
+                "type": "AAAA",
+                "ipv6": "2606:4700:10::6814:179a"
+            }
+        ],
+        "DoH_A": [
+            "104.20.23.154",
+            "172.66.147.243"
+        ]
+    }
+}

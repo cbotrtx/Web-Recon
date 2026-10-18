@@ -1,0 +1,374 @@
+{
+    "_meta": {
+        "target": "lab.hdna.me",
+        "scheme": "https",
+        "url": "https://lab.hdna.me",
+        "scan_type": "G",
+        "depth": "1",
+        "started": "2026-10-18 08:09:08",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 08:11:11",
+        "duration_s": 123
+    },
+    "dns": {
+        "domain": "lab.hdna.me",
+        "A": [
+            "172.67.187.1",
+            "104.21.19.170"
+        ],
+        "A_primary": "172.67.187.1",
+        "MX": [],
+        "NS": [],
+        "TXT": [],
+        "SOA": [],
+        "CNAME": [],
+        "AAAA": [
+            {
+                "host": "lab.hdna.me",
+                "class": "IN",
+                "ttl": 47,
+                "type": "AAAA",
+                "ipv6": "2606:4700:3037::ac43:bb01"
+            },
+            {
+                "host": "lab.hdna.me",
+                "class": "IN",
+                "ttl": 47,
+                "type": "AAAA",
+                "ipv6": "2606:4700:3036::6815:13aa"
+            }
+        ],
+        "DoH_A": [
+            "172.67.187.1",
+            "104.21.19.170"
+        ]
+    },
+    "whois": {
+        "domain": "lab.hdna.me",
+        "rdap": "unavailable (code 0)",
+        "whois_snippet": "Malformed request.\n>>> Last update of WHOIS database: 2026-10-18T08:01:41Z <<<\n\nTerms of Use: Access to WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the registry database. The data in this record is provided by Identity Digital or the Registry Operator for informational purposes only, and accuracy is not guaranteed. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. When using the Whois service, please consider the following: The Whois service is not a replacement for standard EPP commands to the SRS service. Whois is not considered authoritative for registered domain objects. The Whois service may be scheduled for downtime during production or OT&E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries for a period of time to prevent disruption of Whois service access. Abuse of the Whois system through data mining is mitigated by detecting and limiting bulk query access from single sources. Where applicable, the presence of a [Non-Public Data] tag indicates that such data is not made publicly available due to applicable data privacy laws or requirements. Should you wish to contact the registrant, please refer to the Whois records available through the registrar URL listed above. Access to non-public data may be provided, upon request, where it can be re\nasonably confirmed that the requester holds a specific legitimate interest and a proper legal basis for accessing the withheld data. Access to this data provided by Identity Digital can be requested by submitting a request via the form found at https://www.identity.digital/about/policies/whois-layered-access/. The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name. Identity Digital Inc. and Registry Operator reserve the right to modify these terms at any time. By submitting this query, you agree to abide by this policy."
+    },
+    "geo": {
+        "ip": "104.21.19.170",
+        "hostname": "104.21.19.170",
+        "status": "success",
+        "country": "Canada",
+        "regionName": "Ontario",
+        "city": "Toronto",
+        "zip": "M5A",
+        "lat": 43.6532,
+        "lon": -79.3832,
+        "timezone": "America/Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "as": "AS13335 Cloudflare, Inc.",
+        "query": "104.21.19.170"
+    },
+    "subdomain": {
+        "domain": "lab.hdna.me",
+        "count": 1,
+        "by_source": {
+            "hackertarget": 1
+        },
+        "subdomains": {
+            "lab.hdna.me": {
+                "source": "hackertarget",
+                "ip": "172.67.187.1"
+            }
+        },
+        "wordlist_tried": 50
+    },
+    "ports": {
+        "host": "lab.hdna.me",
+        "ip": "104.21.19.170",
+        "ports_scanned": 20,
+        "open_count": 1,
+        "open": {
+            "8080": {
+                "state": "open",
+                "service": "http-alt",
+                "banner": ""
+            }
+        },
+        "closed_filtered": 19,
+        "os_hint": null
+    },
+    "tech": {
+        "url": "https://lab.hdna.me/",
+        "http_code": 404,
+        "web_server": "cloudflare",
+        "detected": [
+            "Cloudflare"
+        ],
+        "script_count": 0
+    },
+    "cms": {
+        "is_wordpress": false,
+        "note": "no WordPress fingerprints on homepage"
+    },
+    "ssl": {
+        "host": "lab.hdna.me",
+        "port": 443,
+        "reachable": true,
+        "subject": {
+            "CN": "hdna.me"
+        },
+        "issuer": {
+            "C": "US",
+            "O": "Google Trust Services",
+            "CN": "WE1"
+        },
+        "valid_from": "2026-09-06 20:58:16",
+        "valid_to": "2026-12-05 21:56:48",
+        "days_left": 48,
+        "expired": false,
+        "expiring_soon": false,
+        "san": [
+            "DNS:hdna.me",
+            "DNS:*.hdna.me"
+        ],
+        "signature": "ecdsa-with-SHA256",
+        "protocols": {
+            "note": "skipped (quick scan)"
+        }
+    },
+    "headers": {
+        "url": "https://lab.hdna.me/",
+        "http_code": 404,
+        "server": "cloudflare",
+        "powered_by": null,
+        "all_headers": {
+            "date": "Sun, 18 Oct 2026 08:10:11 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "x-amz-request-id": "7KA8WTJG28DYW4Y2",
+            "x-amz-id-2": "hI2cn5/Y4f3t/+NLMQ1uFCUqepzQ2OoGBwv81vHobjPOScVBQ8fVQzDZgxspHF5A3cHqiwomGfI=",
+            "server": "cloudflare",
+            "cf-cache-status": "DYNAMIC",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=IaRotrO0tFZMXRB2R3oyqCihACGLiQjfYBl8qdr0oDPSHDhD1Spk0iB%2FsvMrgfZ6bGKIWExfh4j2gsXnEpVornrm2x6BhF2yVVV32SnX4fRUMVztfAfhmmmtVQIl7w%3D%3D\"}]}",
+            "content-encoding": "zstd",
+            "cf-ray": "a4c610ae2dc67448-MIA",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "https://lab.hdna.me/"
+    },
+    "waf": {
+        "url": "https://lab.hdna.me/",
+        "suspected_waf": [
+            "Cloudflare"
+        ],
+        "waf_likely": true,
+        "probe_blocked": false,
+        "probe_code": 404,
+        "server": "cloudflare"
+    },
+    "urls": {
+        "base": "https://lab.hdna.me",
+        "probed": 40,
+        "baseline_404_code": 404,
+        "interesting": [],
+        "count": 0
+    },
+    "api": {
+        "base": "https://lab.hdna.me",
+        "checked": 22,
+        "apis": [],
+        "count": 0,
+        "wayback_api_hints": []
+    },
+    "js": {
+        "page": "https://lab.hdna.me/",
+        "script_srcs_total": 0,
+        "scripts_analyzed": 0,
+        "potential_secrets": [],
+        "js_endpoints": [],
+        "secret_count": 0,
+        "endpoint_count": 0
+    },
+    "vuln": {
+        "target": "lab.hdna.me",
+        "finding_count": 7,
+        "findings": [
+            {
+                "id": "INFO-HEADERS",
+                "severity": "info",
+                "title": "Security headers reviewed in headers module",
+                "hint": "missing HSTS/CSP/X-Frame-Options increases XSS/clickjacking risk"
+            },
+            {
+                "id": "INFO-TLS",
+                "severity": "info",
+                "title": "TLS posture reviewed in ssl module",
+                "hint": "expired cert or TLS<1.2 is a finding"
+            },
+            {
+                "id": "CVE-2024-3400",
+                "severity": "critical",
+                "title": "Palo Alto PAN-OS command injection (verify version)",
+                "affected": "PAN-OS 10.x/11.x",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-46805",
+                "severity": "critical",
+                "title": "Ivanti Connect Secure chain (auth bypass + RCE)",
+                "affected": "Ivanti ICS/VPN",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-4966",
+                "severity": "high",
+                "title": "Citrix NetScaler buffer overflow (session hijack)",
+                "affected": "NetScaler ADC/Gateway",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-20198",
+                "severity": "critical",
+                "title": "Cisco IOS XE privilege escalation via web UI",
+                "affected": "IOS XE with web UI exposed",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2021-44228",
+                "severity": "critical",
+                "title": "Log4Shell \u2014 check Java stacks/headers",
+                "affected": "log4j 2.x < 2.17",
+                "note": "verify manually \u2014 version-based heuristic only"
+            }
+        ],
+        "disclaimer": "Heuristic checks only. Confirm manually; no exploitation performed."
+    },
+    "breach": {
+        "domain": "lab.hdna.me",
+        "hibp_available": false,
+        "note": "No HIBP key. Set hibp_api_key in config/api_keys.php for email-breach lookups.",
+        "recommendations": [
+            "enforce 2FA",
+            "check corporate emails in HIBP",
+            "rotate creds found in JS/headers modules"
+        ],
+        "public_breach_sources": [
+            "https://haveibeenpwned.com",
+            "https://dehashed.com (paid)",
+            "https://leakcheck.io (paid)"
+        ]
+    },
+    "cloud": {
+        "keyword": "lab",
+        "checked": 8,
+        "candidates": [
+            {
+                "url": "https://lab.s3.amazonaws.com",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://s3.amazonaws.com/lab",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://lab.storage.googleapis.com",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://storage.googleapis.com/lab",
+                "code": 403,
+                "possibly_exposed": false
+            }
+        ],
+        "count": 4,
+        "hint": "403 = exists but private; 200+XML listing = PUBLIC \u2014 verify manually"
+    },
+    "os": {
+        "target": "lab.hdna.me",
+        "ip": "104.21.19.170",
+        "icmp_ttl": 57,
+        "tcp": {
+            "probed": [
+                22,
+                25,
+                110,
+                143,
+                445,
+                3389,
+                3306,
+                5432
+            ],
+            "responded": []
+        },
+        "http_server": "unknown",
+        "signals": [
+            "ICMP TTL=57 (near 64) => Linux/Unix-like (+2)",
+            "HTTP Server hidden behind CDN/proxy ('') \u2014 weak signal"
+        ],
+        "guesses": [
+            {
+                "os": "Linux/Unix-like",
+                "confidence": 95
+            }
+        ],
+        "best_guess": "Linux/Unix-like",
+        "disclaimer": "Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting."
+    },
+    "curl": {
+        "base": "https://lab.hdna.me/",
+        "redirect_chain": [
+            {
+                "url": "https://lab.hdna.me/",
+                "code": 404,
+                "server": "cloudflare"
+            }
+        ],
+        "redirect_count": 0,
+        "final_url": "https://lab.hdna.me/",
+        "https_downgrade": false,
+        "timing": {
+            "dns_lookup_s": 0.001,
+            "tcp_connect_s": 0.48,
+            "tls_handshake_s": 0,
+            "time_to_first_byte_s": 1.179,
+            "total_s": 1.179,
+            "download_bytes": 345,
+            "speed_bps": 292,
+            "http_version": "2 (TLS)",
+            "primary_ip": "104.21.19.170",
+            "primary_port": 443
+        },
+        "methods": {
+            "OPTIONS": {
+                "code": 400
+            },
+            "HEAD": {
+                "code": 404
+            },
+            "TRACE": {
+                "code": 405
+            },
+            "PUT": {
+                "code": 405
+            },
+            "DELETE": {
+                "code": 405
+            }
+        },
+        "risky_methods_accepted": [],
+        "note": "No risky HTTP methods accepted on the probed URL."
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "_meta": {
+        "target": "127.0.0.1",
+        "scheme": "http",
+        "url": "http://127.0.0.1",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:23:00",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:23:01",
+        "duration_s": 1
+    },
+    "ports": {
+        "host": "127.0.0.1",
+        "ip": "127.0.0.1",
+        "ports_scanned": 20,
+        "open_count": 1,
+        "open": {
+            "80": {
+                "state": "open",
+                "service": "http",
+                "banner": "HTTP/1.1 200 OK\r\nDate: Sun, 18 Oct 2026 07:23:01 GMT\r\nServer: Apache/2.4.66 (Ubuntu)\r\nLast-Modified: Wed, 30 Sep 2026 19:21:49 GMT\r\nETag: \"29b0-65cb835f5fdf5\"\r\nAccept-Ranges: bytes\r\nContent-Length: 10"
+            }
+        },
+        "closed_filtered": 19,
+        "os_hint": null
+    }
+}

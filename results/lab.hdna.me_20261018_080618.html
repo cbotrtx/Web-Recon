@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web-Recon Report — lab.hdna.me</title>
+<style>
+body{background:#070b07;color:#c9f5c9;font-family:ui-monospace,Menlo,Consolas,monospace;margin:0;padding:32px}
+h1{color:#00ff00}.meta{color:#7fd67f}.card{border:1px solid #0f3d0f;background:#0b120b;border-radius:10px;padding:16px;margin:16px 0}
+h2{color:#7dff7d;margin:0 0 8px}pre{white-space:pre-wrap;word-break:break-word;color:#d6ffd6}.foot{color:#5a7a5a;margin-top:24px}
+</style></head><body>
+<h1>◆ WEB-RECON Report</h1>
+<div class="meta">Target: lab.hdna.me &nbsp;•&nbsp; 2026-10-18 08:06:18 &nbsp;•&nbsp; Author: cbotrtx</div>
+<pre>{
+    &quot;target&quot;: &quot;lab.hdna.me&quot;,
+    &quot;scheme&quot;: &quot;https&quot;,
+    &quot;url&quot;: &quot;https:\/\/lab.hdna.me&quot;,
+    &quot;scan_type&quot;: &quot;G&quot;,
+    &quot;depth&quot;: &quot;3&quot;,
+    &quot;started&quot;: &quot;2026-10-18 08:01:20&quot;,
+    &quot;tool&quot;: &quot;Web-Recon 1.0&quot;,
+    &quot;finished&quot;: &quot;2026-10-18 08:05:39&quot;,
+    &quot;duration_s&quot;: 259
+}</pre>
+<section class='card'><h2>Dns</h2><pre>{
+    &quot;domain&quot;: &quot;lab.hdna.me&quot;,
+    &quot;A&quot;: [
+        &quot;104.21.19.170&quot;,
+        &quot;172.67.187.1&quot;
+    ],
+    &quot;A_primary&quot;: &quot;104.21.19.170&quot;,
+    &quot;MX&quot;: [],
+    &quot;NS&quot;: [],
+    &quot;TXT&quot;: [],
+    &quot;SOA&quot;: [],
+    &quot;CNAME&quot;: [],
+    &quot;AAAA&quot;: [
+        {
+            &quot;host&quot;: &quot;lab.hdna.me&quot;,
+            &quot;class&quot;: &quot;IN&quot;,
+            &quot;ttl&quot;: 182,
+            &quot;type&quot;: &quot;AAAA&quot;,
+            &quot;ipv6&quot;: &quot;2606:4700:3037::ac43:bb01&quot;
+        },
+        {
+            &quot;host&quot;: &quot;lab.hdna.me&quot;,
+            &quot;class&quot;: &quot;IN&quot;,
+            &quot;ttl&quot;: 182,
+            &quot;type&quot;: &quot;AAAA&quot;,
+            &quot;ipv6&quot;: &quot;2606:4700:3036::6815:13aa&quot;
+        }
+    ],
+    &quot;DoH_A&quot;: [
+        &quot;104.21.19.170&quot;,
+        &quot;172.67.187.1&quot;
+    ]
+}</pre></section>
+<section class='card'><h2>Whois</h2><pre>{
+    &quot;domain&quot;: &quot;lab.hdna.me&quot;,
+    &quot;rdap&quot;: &quot;unavailable (code 0)&quot;,
+    &quot;whois_snippet&quot;: &quot;Malformed request.\n&gt;&gt;&gt; Last update of WHOIS database: 2026-10-18T08:01:41Z &lt;&lt;&lt;\n\nTerms of Use: Access to WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the registry database. The data in this record is provided by Identity Digital or the Registry Operator for informational purposes only, and accuracy is not guaranteed. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient&#039;s own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. When using the Whois service, please consider the following: The Whois service is not a replacement for standard EPP commands to the SRS service. Whois is not considered authoritative for registered domain objects. The Whois service may be scheduled for downtime during production or OT&amp;E maintenance periods. Queries to the Whois services are throttled. If too many queries are received from a single IP address within a specified time, the service will begin to reject further queries for a period of time to prevent disruption of Whois service access. Abuse of the Whois system through data mining is mitigated by detecting and limiting bulk query access from single sources. Where applicable, the presence of a [Non-Public Data] tag indicates that such data is not made publicly available due to applicable data privacy laws or requirements. Should you wish to contact the registrant, please refer to the Whois records available through the registrar URL listed above. Access to non-public data may be provided, upon request, where it can be re\nasonably confirmed that the requester holds a specific legitimate interest and a proper legal basis for accessing the withheld data. Access to this data provided by Identity Digital can be requested by submitting a request via the form found at https://www.identity.digital/about/policies/whois-layered-access/. The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name. Identity Digital Inc. and Registry Operator reserve the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.&quot;
+}</pre></section>
+<section class='card'><h2>Geo</h2><pre>{
+    &quot;ip&quot;: &quot;172.67.187.1&quot;,
+    &quot;hostname&quot;: &quot;172.67.187.1&quot;,
+    &quot;note&quot;: &quot;geolocation unavailable&quot;
+}</pre></section>
+<section class='card'><h2>Subdomain</h2><pre>{
+    &quot;domain&quot;: &quot;lab.hdna.me&quot;,
+    &quot;count&quot;: 0,
+    &quot;by_source&quot;: [],
+    &quot;subdomains&quot;: [],
+    &quot;wordlist_tried&quot;: 55
+}</pre></section>
+<section class='card'><h2>Ports</h2><pre>{
+    &quot;host&quot;: &quot;lab.hdna.me&quot;,
+    &quot;ip&quot;: &quot;104.21.19.170&quot;,
+    &quot;ports_scanned&quot;: 95,
+    &quot;open_count&quot;: 1,
+    &quot;open&quot;: {
+        &quot;2087&quot;: {
+            &quot;state&quot;: &quot;open&quot;,
+            &quot;service&quot;: &quot;whm-ssl&quot;,
+            &quot;banner&quot;: &quot;&quot;
+        }
+    },
+    &quot;closed_filtered&quot;: 94,
+    &quot;os_hint&quot;: null
+}</pre></section>
+<section class='card'><h2>Tech</h2><pre>{
+    &quot;url&quot;: &quot;https://lab.hdna.me/&quot;,
+    &quot;http_code&quot;: 0,
+    &quot;detected&quot;: [],
+    &quot;script_count&quot;: 0,
+    &quot;script_srcs&quot;: []
+}</pre></section>
+<section class='card'><h2>Cms</h2><pre>{
+    &quot;is_wordpress&quot;: false,
+    &quot;note&quot;: &quot;no WordPress fingerprints on homepage&quot;
+}</pre></section>
+<section class='card'><h2>Ssl</h2><pre>{
+    &quot;host&quot;: &quot;lab.hdna.me&quot;,
+    &quot;port&quot;: 443,
+    &quot;reachable&quot;: true,
+    &quot;subject&quot;: {
+        &quot;CN&quot;: &quot;hdna.me&quot;
+    },
+    &quot;issuer&quot;: {
+        &quot;C&quot;: &quot;US&quot;,
+        &quot;O&quot;: &quot;Google Trust Services&quot;,
+        &quot;CN&quot;: &quot;WE1&quot;
+    },
+    &quot;valid_from&quot;: &quot;2026-09-06 20:58:16&quot;,
+    &quot;valid_to&quot;: &quot;2026-12-05 21:56:48&quot;,
+    &quot;days_left&quot;: 48,
+    &quot;expired&quot;: false,
+    &quot;expiring_soon&quot;: false,
+    &quot;san&quot;: [
+        &quot;DNS:hdna.me&quot;,
+        &quot;DNS:*.hdna.me&quot;
+    ],
+    &quot;signature&quot;: &quot;ecdsa-with-SHA256&quot;,
+    &quot;protocols&quot;: {
+        &quot;TLSv1.2&quot;: true,
+        &quot;TLSv1.3&quot;: true
+    }
+}</pre></section>
+<section class='card'><h2>Headers</h2><pre>{
+    &quot;url&quot;: &quot;https://lab.hdna.me/&quot;,
+    &quot;http_code&quot;: 0,
+    &quot;server&quot;: &quot;unknown&quot;,
+    &quot;powered_by&quot;: null,
+    &quot;all_headers&quot;: [],
+    &quot;security_headers_present&quot;: [],
+    &quot;security_headers_missing&quot;: [
+        &quot;strict-transport-security&quot;,
+        &quot;content-security-policy&quot;,
+        &quot;x-frame-options&quot;,
+        &quot;x-content-type-options&quot;,
+        &quot;referrer-policy&quot;,
+        &quot;permissions-policy&quot;,
+        &quot;cross-origin-opener-policy&quot;,
+        &quot;cross-origin-resource-policy&quot;
+    ],
+    &quot;cookies&quot;: null,
+    &quot;security_score&quot;: 0,
+    &quot;grade&quot;: &quot;F&quot;,
+    &quot;final_url&quot;: &quot;https://lab.hdna.me/&quot;
+}</pre></section>
+<section class='card'><h2>Waf</h2><pre>{
+    &quot;url&quot;: &quot;https://lab.hdna.me/&quot;,
+    &quot;suspected_waf&quot;: [],
+    &quot;waf_likely&quot;: false,
+    &quot;probe_blocked&quot;: false,
+    &quot;probe_code&quot;: 0,
+    &quot;server&quot;: &quot;unknown&quot;
+}</pre></section>
+<section class='card'><h2>Urls</h2><pre>{
+    &quot;base&quot;: &quot;https://lab.hdna.me&quot;,
+    &quot;probed&quot;: 60,
+    &quot;baseline_404_code&quot;: 0,
+    &quot;interesting&quot;: [],
+    &quot;count&quot;: 0
+}</pre></section>
+<section class='card'><h2>Api</h2><pre>{
+    &quot;base&quot;: &quot;https://lab.hdna.me&quot;,
+    &quot;checked&quot;: 22,
+    &quot;apis&quot;: [],
+    &quot;count&quot;: 0,
+    &quot;wayback_api_hints&quot;: []
+}</pre></section>
+<section class='card'><h2>Js</h2><pre>{
+    &quot;page&quot;: &quot;https://lab.hdna.me/&quot;,
+    &quot;script_srcs_total&quot;: 0,
+    &quot;scripts_analyzed&quot;: 0,
+    &quot;potential_secrets&quot;: [],
+    &quot;js_endpoints&quot;: [],
+    &quot;secret_count&quot;: 0,
+    &quot;endpoint_count&quot;: 0
+}</pre></section>
+<section class='card'><h2>Vuln</h2><pre>{
+    &quot;target&quot;: &quot;lab.hdna.me&quot;,
+    &quot;finding_count&quot;: 10,
+    &quot;findings&quot;: [
+        {
+            &quot;id&quot;: &quot;INFO-HEADERS&quot;,
+            &quot;severity&quot;: &quot;info&quot;,
+            &quot;title&quot;: &quot;Security headers reviewed in headers module&quot;,
+            &quot;hint&quot;: &quot;missing HSTS/CSP/X-Frame-Options increases XSS/clickjacking risk&quot;
+        },
+        {
+            &quot;id&quot;: &quot;INFO-TLS&quot;,
+            &quot;severity&quot;: &quot;info&quot;,
+            &quot;title&quot;: &quot;TLS posture reviewed in ssl module&quot;,
+            &quot;hint&quot;: &quot;expired cert or TLS&lt;1.2 is a finding&quot;
+        },
+        {
+            &quot;id&quot;: &quot;CVE-2024-3400&quot;,
+            &quot;severity&quot;: &quot;critical&quot;,
+            &quot;title&quot;: &quot;Palo Alto PAN-OS command injection (verify version)&quot;,
+            &quot;affected&quot;: &quot;PAN-OS 10.x/11.x&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;CVE-2023-46805&quot;,
+            &quot;severity&quot;: &quot;critical&quot;,
+            &quot;title&quot;: &quot;Ivanti Connect Secure chain (auth bypass + RCE)&quot;,
+            &quot;affected&quot;: &quot;Ivanti ICS/VPN&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;CVE-2023-4966&quot;,
+            &quot;severity&quot;: &quot;high&quot;,
+            &quot;title&quot;: &quot;Citrix NetScaler buffer overflow (session hijack)&quot;,
+            &quot;affected&quot;: &quot;NetScaler ADC/Gateway&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;CVE-2023-20198&quot;,
+            &quot;severity&quot;: &quot;critical&quot;,
+            &quot;title&quot;: &quot;Cisco IOS XE privilege escalation via web UI&quot;,
+            &quot;affected&quot;: &quot;IOS XE with web UI exposed&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;CVE-2021-44228&quot;,
+            &quot;severity&quot;: &quot;critical&quot;,
+            &quot;title&quot;: &quot;Log4Shell \u2014 check Java stacks/headers&quot;,
+            &quot;affected&quot;: &quot;log4j 2.x &lt; 2.17&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;WP-ENUM&quot;,
+            &quot;severity&quot;: &quot;medium&quot;,
+            &quot;title&quot;: &quot;WordPress user enumeration / xmlrpc exposed&quot;,
+            &quot;affected&quot;: &quot;WordPress&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;HDR-CLICKJACK&quot;,
+            &quot;severity&quot;: &quot;medium&quot;,
+            &quot;title&quot;: &quot;Missing X-Frame-Options/CSP frame-ancestors&quot;,
+            &quot;affected&quot;: &quot;any web app&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        },
+        {
+            &quot;id&quot;: &quot;TLS-OLD&quot;,
+            &quot;severity&quot;: &quot;medium&quot;,
+            &quot;title&quot;: &quot;TLS 1.0/1.1 or expired certificate&quot;,
+            &quot;affected&quot;: &quot;TLS endpoints&quot;,
+            &quot;note&quot;: &quot;verify manually \u2014 version-based heuristic only&quot;
+        }
+    ],
+    &quot;disclaimer&quot;: &quot;Heuristic checks only. Confirm manually; no exploitation performed.&quot;
+}</pre></section>
+<section class='card'><h2>Breach</h2><pre>{
+    &quot;domain&quot;: &quot;lab.hdna.me&quot;,
+    &quot;hibp_available&quot;: false,
+    &quot;note&quot;: &quot;No HIBP key. Set hibp_api_key in config/api_keys.php for email-breach lookups.&quot;,
+    &quot;recommendations&quot;: [
+        &quot;enforce 2FA&quot;,
+        &quot;check corporate emails in HIBP&quot;,
+        &quot;rotate creds found in JS/headers modules&quot;
+    ],
+    &quot;public_breach_sources&quot;: [
+        &quot;https://haveibeenpwned.com&quot;,
+        &quot;https://dehashed.com (paid)&quot;,
+        &quot;https://leakcheck.io (paid)&quot;
+    ]
+}</pre></section>
+<section class='card'><h2>Cloud</h2><pre>{
+    &quot;keyword&quot;: &quot;lab&quot;,
+    &quot;checked&quot;: 8,
+    &quot;candidates&quot;: [],
+    &quot;count&quot;: 0,
+    &quot;hint&quot;: &quot;403 = exists but private; 200+XML listing = PUBLIC \u2014 verify manually&quot;
+}</pre></section>
+<section class='card'><h2>Os</h2><pre>{
+    &quot;target&quot;: &quot;lab.hdna.me&quot;,
+    &quot;ip&quot;: &quot;104.21.19.170&quot;,
+    &quot;icmp_ttl&quot;: 57,
+    &quot;tcp&quot;: {
+        &quot;probed&quot;: [
+            22,
+            25,
+            110,
+            143,
+            445,
+            3389,
+            3306,
+            5432
+        ],
+        &quot;responded&quot;: []
+    },
+    &quot;http_server&quot;: &quot;unknown&quot;,
+    &quot;signals&quot;: [
+        &quot;ICMP TTL=57 (near 64) =&gt; Linux/Unix-like (+2)&quot;,
+        &quot;HTTP Server hidden behind CDN/proxy (&#039;&#039;) \u2014 weak signal&quot;
+    ],
+    &quot;guesses&quot;: [
+        {
+            &quot;os&quot;: &quot;Linux/Unix-like&quot;,
+            &quot;confidence&quot;: 95
+        }
+    ],
+    &quot;best_guess&quot;: &quot;Linux/Unix-like&quot;,
+    &quot;disclaimer&quot;: &quot;Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting.&quot;
+}</pre></section>
+<section class='card'><h2>Curl</h2><pre>{
+    &quot;base&quot;: &quot;https://lab.hdna.me/&quot;,
+    &quot;redirect_chain&quot;: [
+        {
+            &quot;url&quot;: &quot;https://lab.hdna.me/&quot;,
+            &quot;code&quot;: 404,
+            &quot;server&quot;: &quot;cloudflare&quot;
+        }
+    ],
+    &quot;redirect_count&quot;: 0,
+    &quot;final_url&quot;: &quot;https://lab.hdna.me/&quot;,
+    &quot;https_downgrade&quot;: false,
+    &quot;timing&quot;: {
+        &quot;dns_lookup_s&quot;: 0.001,
+        &quot;tcp_connect_s&quot;: 0.485,
+        &quot;tls_handshake_s&quot;: 0,
+        &quot;time_to_first_byte_s&quot;: 1.676,
+        &quot;total_s&quot;: 1.676,
+        &quot;download_bytes&quot;: 345,
+        &quot;speed_bps&quot;: 205,
+        &quot;http_version&quot;: &quot;2 (TLS)&quot;,
+        &quot;primary_ip&quot;: &quot;104.21.19.170&quot;,
+        &quot;primary_port&quot;: 443
+    },
+    &quot;methods&quot;: {
+        &quot;OPTIONS&quot;: {
+            &quot;code&quot;: 400
+        },
+        &quot;HEAD&quot;: {
+            &quot;code&quot;: 404
+        },
+        &quot;TRACE&quot;: {
+            &quot;code&quot;: 405
+        },
+        &quot;PUT&quot;: {
+            &quot;code&quot;: 405
+        },
+        &quot;DELETE&quot;: {
+            &quot;code&quot;: 405
+        }
+    },
+    &quot;risky_methods_accepted&quot;: [],
+    &quot;note&quot;: &quot;No risky HTTP methods accepted on the probed URL.&quot;
+}</pre></section>
+
+<div class="foot">Generated by Web-Recon 1.0 — authorized testing only.</div>
+</body></html>

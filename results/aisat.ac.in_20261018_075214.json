@@ -1,0 +1,465 @@
+{
+    "_meta": {
+        "target": "aisat.ac.in",
+        "scheme": "http",
+        "url": "http://aisat.ac.in",
+        "scan_type": "H",
+        "depth": "3",
+        "started": "2026-10-18 07:47:07",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:52:14",
+        "duration_s": 307
+    },
+    "title": {
+        "url": "http://aisat.ac.in/",
+        "http_code": 0,
+        "title": null
+    },
+    "dns": {
+        "domain": "aisat.ac.in",
+        "A": [
+            "172.67.217.65",
+            "104.21.61.251"
+        ],
+        "A_primary": "104.21.61.251",
+        "MX": [
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 300,
+                "type": "MX",
+                "pri": 5,
+                "target": "alt1.aspmx.l.google.com"
+            },
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 300,
+                "type": "MX",
+                "pri": 5,
+                "target": "alt2.aspmx.l.google.com"
+            },
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 300,
+                "type": "MX",
+                "pri": 1,
+                "target": "aspmx.l.google.com"
+            }
+        ],
+        "NS": [
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 6185,
+                "type": "NS",
+                "target": "marissa.ns.cloudflare.com"
+            },
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 6185,
+                "type": "NS",
+                "target": "trey.ns.cloudflare.com"
+            }
+        ],
+        "TXT": [
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 300,
+                "type": "TXT",
+                "txt": "google-site-verification=EARkzy6t8mJKdaFWluEZAzypCuaYpzTCaKswiidZs-g",
+                "entries": [
+                    "google-site-verification=EARkzy6t8mJKdaFWluEZAzypCuaYpzTCaKswiidZs-g"
+                ]
+            }
+        ],
+        "SOA": [
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 785,
+                "type": "SOA",
+                "mname": "marissa.ns.cloudflare.com",
+                "rname": "dns.cloudflare.com",
+                "serial": 2417298684,
+                "refresh": 10000,
+                "retry": 2400,
+                "expire": 604800,
+                "minimum-ttl": 1800
+            }
+        ],
+        "CNAME": [],
+        "AAAA": [
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 300,
+                "type": "AAAA",
+                "ipv6": "2606:4700:3035::ac43:d941"
+            },
+            {
+                "host": "aisat.ac.in",
+                "class": "IN",
+                "ttl": 300,
+                "type": "AAAA",
+                "ipv6": "2606:4700:3032::6815:3dfb"
+            }
+        ],
+        "DoH_A": [
+            "172.67.217.65",
+            "104.21.61.251"
+        ]
+    },
+    "whois": {
+        "domain": "aisat.ac.in",
+        "rdap": "unavailable (code 0)",
+        "whois_snippet": "Domain Name: aisat.ac.in\nRegistry Domain ID: D4914512-IN\nRegistrar URL: http://www.ernet.in\nUpdated Date: 2024-02-23T15:02:07.169Z\nCreation Date: 2011-03-08T10:47:36.875Z\nRegistry Expiry Date: 2027-03-08T10:47:36.875Z\nRegistrar: ERNET India\nRegistrar IANA ID: 800068\nRegistrar Abuse Contact Email: tejalt@eis.ernet.in\nRegistrar Abuse Contact Phone: +91.1123358248\nDomain Status: ok https://icann.org/epp#ok\nRegistry Registrant ID: REDACTED FOR PRIVACY\nRegistrant Name: REDACTED FOR PRIVACY\nRegistrant Organization: \nRegistrant Street: REDACTED FOR PRIVACY\nRegistrant City: REDACTED FOR PRIVACY\nRegistrant State/Province: Kerala\nRegistrant Postal Code: REDACTED FOR PRIVACY\nRegistrant Country: IN\nRegistrant Phone: REDACTED FOR PRIVACY\nRegistrant Fax: REDACTED FOR PRIVACY\nRegistrant Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.\nRegistry Admin ID: REDACTED FOR PRIVACY\nAdmin Name: REDACTED FOR PRIVACY\nAdmin Organization: REDACTED FOR PRIVACY\nAdmin Street: REDACTED FOR PRIVACY\nAdmin City: REDACTED FOR PRIVACY\nAdmin State/Province: REDACTED FOR PRIVACY\nAdmin Postal Code: REDACTED FOR PRIVACY\nAdmin Country: REDACTED FOR PRIVACY\nAdmin Phone: REDACTED FOR PRIVACY\nAdmin Fax: REDACTED FOR PRIVACY\nAdmin Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.\nRegistry Tech ID: REDACTED FOR PRIVACY\nTech Name: REDACTED FOR PRIVACY\nTech Organization: REDACTED FOR PRIVACY\nTech Street: REDACTED FOR PRIVACY\nTech City: REDACTED FOR PRIVACY\nTech State/Province: REDACTED FOR PRIVACY\nTech Postal Code: REDACTED FOR PRIVACY\nTech Country: REDACTED FOR PRIVACY\nTech Phone: REDACTED FOR PRIVACY\nTech Fax: REDACTED FOR PRIVACY\nTech Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.\nRegistry Billing ID: REDACTED FOR PRIVACY\nBilling Name: REDACTED FOR PRIVACY\nBilling Organization: REDACTED FOR PRIVACY\nBilling Street: REDACTED FOR PRIVACY\nBilling City: REDACTED FOR PRIVACY\nBilling State/Province: REDACTED FOR PRIVACY\nBilling Postal Code: REDACTED FOR PRIVACY\nBilling Country: REDACTED FOR PRIVACY\nBilling Phone: REDACTED FOR PRIVACY\nBilling Fax: REDACTED FOR PRIVACY\nBilling Email: Please query the RDDS service of the Registrar of Record identified in this output for information on how to contact the Registrant, Admin, or Tech contact of the queried domain name.\nName Server: marissa.ns.cloudflare.com\nName Server: trey.ns.cloudflare.com\nDNSSEC: unsigned\nURL of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf"
+    },
+    "geo": {
+        "ip": "172.67.217.65",
+        "hostname": "172.67.217.65",
+        "note": "geolocation unavailable"
+    },
+    "subdomain": {
+        "domain": "aisat.ac.in",
+        "count": 3,
+        "by_source": {
+            "bruteforce": 3
+        },
+        "subdomains": {
+            "www.aisat.ac.in": {
+                "source": "bruteforce",
+                "ip": "172.67.217.65"
+            },
+            "mail.aisat.ac.in": {
+                "source": "bruteforce",
+                "ip": "172.67.217.65"
+            },
+            "cpanel.aisat.ac.in": {
+                "source": "bruteforce",
+                "ip": "172.67.217.65"
+            }
+        },
+        "wordlist_tried": 55
+    },
+    "ports": {
+        "host": "aisat.ac.in",
+        "ip": "104.21.61.251",
+        "ports_scanned": 95,
+        "open_count": 2,
+        "open": {
+            "2087": {
+                "state": "open",
+                "service": "whm-ssl",
+                "banner": ""
+            },
+            "2096": {
+                "state": "open",
+                "service": "webmail-ssl",
+                "banner": ""
+            }
+        },
+        "closed_filtered": 93,
+        "os_hint": null
+    },
+    "nmap": {
+        "target": "aisat.ac.in",
+        "command": "timeout 180 nmap -sV -Pn 'aisat.ac.in' 2>&1",
+        "raw": "Starting Nmap 7.98 ( https://nmap.org ) at 2026-10-18 13:17 +0530\nNmap scan report for aisat.ac.in (104.21.61.251)\nHost is up (0.28s latency).\nOther addresses for aisat.ac.in (not scanned): 172.67.217.65 2606:4700:3035::ac43:d941 2606:4700:3032::6815:3dfb\nNot shown: 997 filtered tcp ports (no-response)\nPORT     STATE SERVICE  VERSION\n80/tcp   open  http     Cloudflare http proxy\n443/tcp  open  ssl/http Cloudflare http proxy\n8080/tcp open  http     Cloudflare http proxy\n\nService detection performed. Please report any incorrect results at https://nmap.org/submit/ .\nNmap done: 1 IP address (1 host up) scanned in 77.37 seconds"
+    },
+    "tech": {
+        "url": "http://aisat.ac.in/",
+        "http_code": 0,
+        "detected": [],
+        "script_count": 0,
+        "script_srcs": []
+    },
+    "cms": {
+        "is_wordpress": false,
+        "note": "no WordPress fingerprints on homepage"
+    },
+    "ssl": {
+        "note": "target uses HTTP; no TLS to analyze",
+        "target": "aisat.ac.in"
+    },
+    "headers": {
+        "url": "http://aisat.ac.in/",
+        "http_code": 0,
+        "server": "unknown",
+        "powered_by": null,
+        "all_headers": [],
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "http://aisat.ac.in/"
+    },
+    "waf": {
+        "url": "http://aisat.ac.in/",
+        "suspected_waf": [],
+        "waf_likely": false,
+        "probe_blocked": false,
+        "probe_code": 0,
+        "server": "unknown"
+    },
+    "urls": {
+        "base": "http://aisat.ac.in",
+        "probed": 60,
+        "baseline_404_code": 0,
+        "interesting": [],
+        "count": 0
+    },
+    "robots": {
+        "url": "http://aisat.ac.in/robots.txt",
+        "http_code": 0,
+        "found": false,
+        "content": null,
+        "note": "robots.txt not found or empty"
+    },
+    "api": {
+        "base": "http://aisat.ac.in",
+        "checked": 22,
+        "apis": [],
+        "count": 0,
+        "wayback_api_hints": []
+    },
+    "js": {
+        "page": "http://aisat.ac.in/",
+        "script_srcs_total": 0,
+        "scripts_analyzed": 0,
+        "potential_secrets": [],
+        "js_endpoints": [],
+        "secret_count": 0,
+        "endpoint_count": 0
+    },
+    "vuln": {
+        "target": "aisat.ac.in",
+        "finding_count": 10,
+        "findings": [
+            {
+                "id": "INFO-HEADERS",
+                "severity": "info",
+                "title": "Security headers reviewed in headers module",
+                "hint": "missing HSTS/CSP/X-Frame-Options increases XSS/clickjacking risk"
+            },
+            {
+                "id": "INFO-TLS",
+                "severity": "info",
+                "title": "TLS posture reviewed in ssl module",
+                "hint": "expired cert or TLS<1.2 is a finding"
+            },
+            {
+                "id": "CVE-2024-3400",
+                "severity": "critical",
+                "title": "Palo Alto PAN-OS command injection (verify version)",
+                "affected": "PAN-OS 10.x/11.x",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-46805",
+                "severity": "critical",
+                "title": "Ivanti Connect Secure chain (auth bypass + RCE)",
+                "affected": "Ivanti ICS/VPN",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-4966",
+                "severity": "high",
+                "title": "Citrix NetScaler buffer overflow (session hijack)",
+                "affected": "NetScaler ADC/Gateway",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-20198",
+                "severity": "critical",
+                "title": "Cisco IOS XE privilege escalation via web UI",
+                "affected": "IOS XE with web UI exposed",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2021-44228",
+                "severity": "critical",
+                "title": "Log4Shell \u2014 check Java stacks/headers",
+                "affected": "log4j 2.x < 2.17",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "WP-ENUM",
+                "severity": "medium",
+                "title": "WordPress user enumeration / xmlrpc exposed",
+                "affected": "WordPress",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "HDR-CLICKJACK",
+                "severity": "medium",
+                "title": "Missing X-Frame-Options/CSP frame-ancestors",
+                "affected": "any web app",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "TLS-OLD",
+                "severity": "medium",
+                "title": "TLS 1.0/1.1 or expired certificate",
+                "affected": "TLS endpoints",
+                "note": "verify manually \u2014 version-based heuristic only"
+            }
+        ],
+        "disclaimer": "Heuristic checks only. Confirm manually; no exploitation performed."
+    },
+    "breach": {
+        "domain": "aisat.ac.in",
+        "hibp_available": false,
+        "note": "No HIBP key. Set hibp_api_key in config/api_keys.php for email-breach lookups.",
+        "recommendations": [
+            "enforce 2FA",
+            "check corporate emails in HIBP",
+            "rotate creds found in JS/headers modules"
+        ],
+        "public_breach_sources": [
+            "https://haveibeenpwned.com",
+            "https://dehashed.com (paid)",
+            "https://leakcheck.io (paid)"
+        ]
+    },
+    "cloud": {
+        "keyword": "aisat",
+        "checked": 8,
+        "candidates": [],
+        "count": 0,
+        "hint": "403 = exists but private; 200+XML listing = PUBLIC \u2014 verify manually"
+    },
+    "os": {
+        "target": "aisat.ac.in",
+        "ip": "172.67.217.65",
+        "icmp_ttl": 57,
+        "tcp": {
+            "probed": [
+                22,
+                25,
+                110,
+                143,
+                445,
+                3389,
+                3306,
+                5432
+            ],
+            "responded": []
+        },
+        "http_server": "unknown",
+        "signals": [
+            "ICMP TTL=57 (near 64) => Linux/Unix-like (+2)",
+            "HTTP Server hidden behind CDN/proxy ('') \u2014 weak signal"
+        ],
+        "guesses": [
+            {
+                "os": "Linux/Unix-like",
+                "confidence": 95
+            }
+        ],
+        "best_guess": "Linux/Unix-like",
+        "disclaimer": "Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting."
+    },
+    "curl": {
+        "base": "http://aisat.ac.in/",
+        "redirect_chain": [
+            {
+                "url": "http://aisat.ac.in/",
+                "code": 200,
+                "server": "cloudflare"
+            }
+        ],
+        "redirect_count": 0,
+        "final_url": "http://aisat.ac.in/",
+        "https_downgrade": false,
+        "timing": {
+            "dns_lookup_s": 0.001,
+            "tcp_connect_s": 0.485,
+            "tls_handshake_s": 0,
+            "time_to_first_byte_s": 0.996,
+            "total_s": 0.996,
+            "download_bytes": 3161,
+            "speed_bps": 3173,
+            "http_version": "1.1",
+            "primary_ip": "172.67.217.65",
+            "primary_port": 80
+        },
+        "methods": {
+            "OPTIONS": {
+                "code": 200
+            },
+            "HEAD": {
+                "code": 200
+            },
+            "TRACE": {
+                "code": 405
+            },
+            "PUT": {
+                "code": 200
+            },
+            "DELETE": {
+                "code": 200
+            }
+        },
+        "risky_methods_accepted": [
+            "PUT (200)",
+            "DELETE (200)"
+        ],
+        "note": "Review accepted methods \u2014 TRACE/PUT/DELETE can aid XSS, file overwrite or data tampering."
+    },
+    "subnet": {
+        "target": "aisat.ac.in",
+        "result": []
+    },
+    "reverseip": {
+        "ip": "104.21.61.251",
+        "total_found": 0,
+        "domains": []
+    },
+    "sqli": {
+        "error": "DOMDocument::loadHTML(): Argument #1 ($source) must not be empty"
+    },
+    "bloggers": {
+        "error": "DOMDocument::loadHTML(): Argument #1 ($source) must not be empty"
+    },
+    "crawler": {
+        "base": "http://aisat.ac.in/",
+        "probed": 5,
+        "found_count": 0,
+        "found": []
+    },
+    "mx": {
+        "domain": "aisat.ac.in",
+        "records": [
+            {
+                "priority": 5,
+                "host": "alt1.aspmx.l.google.com",
+                "ip": "192.178.234.27"
+            },
+            {
+                "priority": 1,
+                "host": "aspmx.l.google.com",
+                "ip": "172.253.115.27"
+            },
+            {
+                "priority": 5,
+                "host": "alt2.aspmx.l.google.com",
+                "ip": "172.253.116.27"
+            }
+        ],
+        "count": 3
+    }
+}

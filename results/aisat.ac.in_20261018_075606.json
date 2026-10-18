@@ -1,0 +1,18 @@
+{
+    "_meta": {
+        "target": "aisat.ac.in",
+        "scheme": "http",
+        "url": "http://aisat.ac.in",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:56:05",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:56:06",
+        "duration_s": 1
+    },
+    "title": {
+        "url": "http://aisat.ac.in/",
+        "http_code": 200,
+        "title": "One moment, please..."
+    }
+}

@@ -1,0 +1,5 @@
+# Web-Recon PHP requirements
+# PHP >= 7.4 with extensions:
+#   php-curl php-json php-mbstring (optional: php-sqlite3, php-sockets, php-pcntl)
+# Ubuntu/Debian: sudo apt install php-cli php-curl php-json php-mbstring php-sqlite3
+# No composer dependencies required (stdlib + cURL only).

@@ -1,0 +1,68 @@
+{
+    "_meta": {
+        "target": "aisat.ac.in",
+        "scheme": "http",
+        "url": "http://aisat.ac.in",
+        "scan_type": "F",
+        "depth": "1",
+        "started": "2026-10-18 07:56:11",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 07:56:15",
+        "duration_s": 4
+    },
+    "headers": {
+        "url": "http://aisat.ac.in/",
+        "http_code": 200,
+        "server": "cloudflare",
+        "powered_by": null,
+        "all_headers": {
+            "date": "Sun, 18 Oct 2026 07:56:12 GMT",
+            "content-type": "text/html; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "server": "cloudflare",
+            "cache-control": "private, no-cache, no-store, must-revalidate, max-age=0",
+            "cf-edge-cache": "no-cache",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=x%2BoiFkIMCqtYK%2BKYPMWMhaAyH%2B9TuXjE2qpvsxi41T9zlOiF4vcqI6OV93Yl4pJ9EFZ3LY6dpa350t%2BgTDJ4n4dwJ%2BmDWxYr8IKiTrvzNulVUTHQOZ0DYF75Q42ogg%3D%3D\"}]}",
+            "cf-cache-status": "DYNAMIC",
+            "content-encoding": "zstd",
+            "cf-ray": "a4c5fc2e6d5dd7b3-MIA",
+            "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "http://aisat.ac.in/"
+    },
+    "waf": {
+        "url": "http://aisat.ac.in/",
+        "suspected_waf": [
+            "Cloudflare"
+        ],
+        "waf_likely": true,
+        "probe_blocked": false,
+        "probe_code": 200,
+        "server": "cloudflare"
+    },
+    "tech": {
+        "url": "http://aisat.ac.in/",
+        "http_code": 200,
+        "web_server": "cloudflare",
+        "detected": [
+            "Cloudflare"
+        ],
+        "script_count": 0
+    }
+}

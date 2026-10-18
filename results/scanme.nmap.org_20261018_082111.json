@@ -1,0 +1,375 @@
+{
+    "_meta": {
+        "target": "scanme.nmap.org",
+        "scheme": "http",
+        "url": "http://scanme.nmap.org",
+        "scan_type": "G",
+        "depth": "3",
+        "started": "2026-10-18 08:18:08",
+        "tool": "Web-Recon 1.0",
+        "finished": "2026-10-18 08:21:11",
+        "duration_s": 183
+    },
+    "dns": {
+        "domain": "scanme.nmap.org",
+        "A": [
+            "45.33.32.156"
+        ],
+        "A_primary": "45.33.32.156",
+        "MX": [],
+        "NS": [],
+        "TXT": [],
+        "SOA": [],
+        "CNAME": [],
+        "AAAA": [
+            {
+                "host": "scanme.nmap.org",
+                "class": "IN",
+                "ttl": 3561,
+                "type": "AAAA",
+                "ipv6": "2600:3c01::f03c:91ff:fe18:bb2f"
+            }
+        ],
+        "DoH_A": [
+            "45.33.32.156"
+        ]
+    },
+    "whois": {
+        "domain": "scanme.nmap.org",
+        "rdap": "unavailable (code 400)",
+        "whois_snippet": "Malformed request.\n>>> Last update of WHOIS database: 2026-10-18T08:18:17Z <<<\n\nTerms of Use: Access to Public Interest Registry WHOIS information is provided to assist persons in determining the contents of a domain name registration record in the Public Interest Registry registry database. The data in this record is provided by Public Interest Registry for informational purposes only, and Public Interest Registry does not guarantee its accuracy. This service is intended only for query-based access. You agree that you will use this data only for lawful purposes and that, under no circumstances will you use this data to (a) allow, enable, or otherwise support the transmission by e-mail, telephone, or facsimile of mass unsolicited, commercial advertising or solicitations to entities other than the data recipient's own existing customers; or (b) enable high volume, automated, electronic processes that send queries or data to the systems of Registry Operator, a Registrar, or Identity Digital except as reasonably necessary to register domain names or modify existing registrations. All rights reserved. Public Interest Registry reserves the right to modify these terms at any time. By submitting this query, you agree to abide by this policy.  The Registrar of Record identified in this output may have an RDDS service that can be queried for additional information on how to contact the Registrant, Admin, or Tech contact of the queried domain name."
+    },
+    "geo": {
+        "ip": "45.33.32.156",
+        "hostname": "scanme.nmap.org",
+        "status": "success",
+        "country": "United States",
+        "regionName": "California",
+        "city": "Fremont",
+        "zip": "94536",
+        "lat": 37.5483,
+        "lon": -121.9886,
+        "timezone": "America/Los_Angeles",
+        "isp": "Akamai Technologies, Inc.",
+        "org": "Linode",
+        "as": "AS63949 Akamai Connected Cloud",
+        "query": "45.33.32.156"
+    },
+    "subdomain": {
+        "domain": "scanme.nmap.org",
+        "count": 1,
+        "by_source": {
+            "hackertarget": 1
+        },
+        "subdomains": {
+            "scanme.nmap.org": {
+                "source": "hackertarget",
+                "ip": "45.33.32.156"
+            }
+        },
+        "wordlist_tried": 55
+    },
+    "ports": {
+        "host": "scanme.nmap.org",
+        "ip": "45.33.32.156",
+        "ports_scanned": 95,
+        "open_count": 1,
+        "open": {
+            "22": {
+                "state": "open",
+                "service": "ssh",
+                "banner": "SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13"
+            }
+        },
+        "closed_filtered": 94,
+        "os_hint": "Unix-like (SSH open, no SMB)"
+    },
+    "tech": {
+        "url": "http://scanme.nmap.org/",
+        "http_code": 200,
+        "web_server": "Apache/2.4.7 (Ubuntu)",
+        "detected": [
+            "Google Analytics"
+        ],
+        "script_count": 1,
+        "script_srcs": [
+            "/shared/js/nst.js?v=2"
+        ]
+    },
+    "cms": {
+        "is_wordpress": false,
+        "note": "no WordPress fingerprints on homepage"
+    },
+    "ssl": {
+        "note": "target uses HTTP; no TLS to analyze",
+        "target": "scanme.nmap.org"
+    },
+    "headers": {
+        "url": "http://scanme.nmap.org/",
+        "http_code": 200,
+        "server": "Apache/2.4.7 (Ubuntu)",
+        "powered_by": null,
+        "all_headers": {
+            "date": "Sun, 18 Oct 2026 08:19:23 GMT",
+            "server": "Apache/2.4.7 (Ubuntu)",
+            "accept-ranges": "bytes",
+            "vary": "Accept-Encoding",
+            "content-encoding": "gzip",
+            "content-length": "2068",
+            "content-type": "text/html"
+        },
+        "security_headers_present": [],
+        "security_headers_missing": [
+            "strict-transport-security",
+            "content-security-policy",
+            "x-frame-options",
+            "x-content-type-options",
+            "referrer-policy",
+            "permissions-policy",
+            "cross-origin-opener-policy",
+            "cross-origin-resource-policy"
+        ],
+        "cookies": null,
+        "security_score": 0,
+        "grade": "F",
+        "final_url": "http://scanme.nmap.org/"
+    },
+    "waf": {
+        "url": "http://scanme.nmap.org/",
+        "suspected_waf": [],
+        "waf_likely": false,
+        "probe_blocked": false,
+        "probe_code": 200,
+        "server": "Apache/2.4.7 (Ubuntu)"
+    },
+    "urls": {
+        "base": "http://scanme.nmap.org",
+        "probed": 60,
+        "baseline_404_code": 404,
+        "interesting": [],
+        "count": 0
+    },
+    "api": {
+        "base": "http://scanme.nmap.org",
+        "checked": 22,
+        "apis": [],
+        "count": 0,
+        "wayback_api_hints": []
+    },
+    "js": {
+        "page": "http://scanme.nmap.org/",
+        "script_srcs_total": 1,
+        "scripts_analyzed": 1,
+        "potential_secrets": [],
+        "js_endpoints": [],
+        "secret_count": 0,
+        "endpoint_count": 0
+    },
+    "vuln": {
+        "target": "scanme.nmap.org",
+        "finding_count": 10,
+        "findings": [
+            {
+                "id": "INFO-HEADERS",
+                "severity": "info",
+                "title": "Security headers reviewed in headers module",
+                "hint": "missing HSTS/CSP/X-Frame-Options increases XSS/clickjacking risk"
+            },
+            {
+                "id": "INFO-TLS",
+                "severity": "info",
+                "title": "TLS posture reviewed in ssl module",
+                "hint": "expired cert or TLS<1.2 is a finding"
+            },
+            {
+                "id": "CVE-2024-3400",
+                "severity": "critical",
+                "title": "Palo Alto PAN-OS command injection (verify version)",
+                "affected": "PAN-OS 10.x/11.x",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-46805",
+                "severity": "critical",
+                "title": "Ivanti Connect Secure chain (auth bypass + RCE)",
+                "affected": "Ivanti ICS/VPN",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-4966",
+                "severity": "high",
+                "title": "Citrix NetScaler buffer overflow (session hijack)",
+                "affected": "NetScaler ADC/Gateway",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2023-20198",
+                "severity": "critical",
+                "title": "Cisco IOS XE privilege escalation via web UI",
+                "affected": "IOS XE with web UI exposed",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "CVE-2021-44228",
+                "severity": "critical",
+                "title": "Log4Shell \u2014 check Java stacks/headers",
+                "affected": "log4j 2.x < 2.17",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "WP-ENUM",
+                "severity": "medium",
+                "title": "WordPress user enumeration / xmlrpc exposed",
+                "affected": "WordPress",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "HDR-CLICKJACK",
+                "severity": "medium",
+                "title": "Missing X-Frame-Options/CSP frame-ancestors",
+                "affected": "any web app",
+                "note": "verify manually \u2014 version-based heuristic only"
+            },
+            {
+                "id": "TLS-OLD",
+                "severity": "medium",
+                "title": "TLS 1.0/1.1 or expired certificate",
+                "affected": "TLS endpoints",
+                "note": "verify manually \u2014 version-based heuristic only"
+            }
+        ],
+        "disclaimer": "Heuristic checks only. Confirm manually; no exploitation performed."
+    },
+    "breach": {
+        "domain": "scanme.nmap.org",
+        "hibp_available": false,
+        "note": "No HIBP key. Set hibp_api_key in config/api_keys.php for email-breach lookups.",
+        "recommendations": [
+            "enforce 2FA",
+            "check corporate emails in HIBP",
+            "rotate creds found in JS/headers modules"
+        ],
+        "public_breach_sources": [
+            "https://haveibeenpwned.com",
+            "https://dehashed.com (paid)",
+            "https://leakcheck.io (paid)"
+        ]
+    },
+    "cloud": {
+        "keyword": "scanme",
+        "checked": 8,
+        "candidates": [
+            {
+                "url": "https://scanme.s3.amazonaws.com",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://s3.amazonaws.com/scanme",
+                "code": 403,
+                "possibly_exposed": false
+            },
+            {
+                "url": "https://scanme.storage.googleapis.com",
+                "code": 200,
+                "possibly_exposed": true
+            },
+            {
+                "url": "https://storage.googleapis.com/scanme",
+                "code": 200,
+                "possibly_exposed": true
+            },
+            {
+                "url": "https://scanme.blob.core.windows.net",
+                "code": 403,
+                "possibly_exposed": false
+            }
+        ],
+        "count": 5,
+        "hint": "403 = exists but private; 200+XML listing = PUBLIC \u2014 verify manually"
+    },
+    "os": {
+        "target": "scanme.nmap.org",
+        "ip": "45.33.32.156",
+        "icmp_ttl": 49,
+        "tcp": {
+            "probed": [
+                22,
+                25,
+                110,
+                143,
+                445,
+                3389,
+                3306,
+                5432
+            ],
+            "responded": [
+                22
+            ]
+        },
+        "http_server": "Apache/2.4.7 (Ubuntu)",
+        "signals": [
+            "ICMP TTL=49 (near 64) => Linux/Unix-like (+2)",
+            "SSH banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13 => Linux/Unix-like (+2)",
+            "banner: SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.13 => Linux (+2)",
+            "HTTP Server: Apache/2.4.7 (Ubuntu) (typically Linux-hosted) => Linux/Unix-like (+1)"
+        ],
+        "guesses": [
+            {
+                "os": "Linux/Unix-like",
+                "confidence": 71
+            },
+            {
+                "os": "Linux",
+                "confidence": 29
+            }
+        ],
+        "best_guess": "Linux/Unix-like",
+        "disclaimer": "Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting."
+    },
+    "curl": {
+        "base": "http://scanme.nmap.org/",
+        "redirect_chain": [
+            {
+                "url": "http://scanme.nmap.org/",
+                "code": 200,
+                "server": "Apache/2.4.7 (Ubuntu)"
+            }
+        ],
+        "redirect_count": 0,
+        "final_url": "http://scanme.nmap.org/",
+        "https_downgrade": false,
+        "timing": {
+            "dns_lookup_s": 0.001,
+            "tcp_connect_s": 0.626,
+            "tls_handshake_s": 0,
+            "time_to_first_byte_s": 0.983,
+            "total_s": 0.985,
+            "download_bytes": 2068,
+            "speed_bps": 2099,
+            "http_version": "1.1",
+            "primary_ip": "45.33.32.156",
+            "primary_port": 80
+        },
+        "methods": {
+            "OPTIONS": {
+                "code": 200,
+                "allow": "OPTIONS,GET,HEAD,POST"
+            },
+            "HEAD": {
+                "code": 200
+            },
+            "TRACE": {
+                "code": 405
+            },
+            "PUT": {
+                "code": 405
+            },
+            "DELETE": {
+                "code": 405
+            }
+        },
+        "risky_methods_accepted": [],
+        "note": "No risky HTTP methods accepted on the probed URL."
+    }
+}
