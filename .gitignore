@@ -1,0 +1,13 @@
+# Web-Recon runtime artifacts — generated locally, never commit scan data
+cache/*.json
+results/*
+logs/*.log
+database/*.sqlite
+database/results_fallback.json
+
+# Local secrets (prefer environment variables)
+.env
+
+# Editor / OS noise
+*.swp
+.DS_Store

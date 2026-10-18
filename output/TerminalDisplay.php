@@ -1,12 +1,13 @@
 <?php
 /** Web-Recon: Beautiful CLI result rendering */
+if (!function_exists('color')) require_once __DIR__ . '/../colors.php';
 class TerminalDisplay {
     public static function render(array $results): void {
         echo "\n".color("+=============================================================+",'green')."\n";
         echo color("|                      SCAN RESULTS                           |",'bright_green')."\n";
         echo color("+=============================================================+",'green')."\n";
         $meta=$results['_meta']??[];
-        if($meta) echo color(" Target: {$meta['url']}  |  Type: {$meta['scan_type']}  |  Depth: {$meta['depth']}  |  {$meta['duration_s']}s\n",'cyan');
+        if($meta) echo color(" Target: ".($meta['url']??'')."  |  Type: ".($meta['scan_type']??'')."  |  Depth: ".($meta['depth']??'')."  |  ".($meta['duration_s']??0)."s\n",'cyan');
         foreach($results as $cat=>$data){
             if($cat==='_meta')continue;
             echo "\n".color(strtoupper($cat),'bright_green').":\n";

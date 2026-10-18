@@ -103,10 +103,12 @@ class CurlScanner {
     }
     private function methods(string $url): array {
         $out = [];
-        foreach (['OPTIONS','HEAD','TRACE','PUT','DELETE'] as $m) {
+        // PATCH is now actually probed — scan() checked it in risky_methods_accepted
+        // but it was never requested, so that check could never fire.
+        foreach (['OPTIONS','HEAD','TRACE','PUT','DELETE','PATCH'] as $m) {
             $ch = $this->newHandle($url);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $m);
-            if (in_array($m, ['PUT','DELETE','TRACE'], true)) curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Length: 0']);
+            if (in_array($m, ['PUT','DELETE','TRACE','PATCH'], true)) curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Length: 0']);
             $raw = (string)curl_exec($ch);
             $info = curl_getinfo($ch);
             $row = ['code' => $info['http_code'] ?? 0];

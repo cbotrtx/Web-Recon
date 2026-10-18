@@ -10,7 +10,8 @@ class HeaderAnalyzer {
         $need = ['strict-transport-security','content-security-policy','x-frame-options','x-content-type-options','referrer-policy','permissions-policy','cross-origin-opener-policy','cross-origin-resource-policy'];
         $present = []; $missing = [];
         foreach ($need as $n) { if (isset($h[$n])) $present[$n]=$h[$n]; else $missing[]=$n; }
-        $cookies = $h['set-cookie'] ?? ($h['set-cookie'.''] ?? null);
+        // May be a string or (with several Set-Cookie headers) an array — APIClient collects duplicates now.
+        $cookies = $h['set-cookie'] ?? null;
         $score = (int)round(count($present)/count($need)*100);
         return [
             'url'=>$url,'http_code'=>$r['code']??0,'server'=>$h['server']??'unknown',

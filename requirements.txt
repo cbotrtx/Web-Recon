@@ -1,5 +1,6 @@
 # Web-Recon PHP requirements
-# PHP >= 7.4 with extensions:
+# PHP >= 8.0 (the code uses str_contains/str_starts_with/str_ends_with and match expressions)
+# Extensions:
 #   php-curl php-json php-mbstring (optional: php-sqlite3, php-sockets, php-pcntl)
 # Ubuntu/Debian: sudo apt install php-cli php-curl php-json php-mbstring php-sqlite3
 # No composer dependencies required (stdlib + cURL only).

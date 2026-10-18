@@ -3,6 +3,7 @@
 class MXLookup {
     public function __construct($client=null,$cache=null,$logger=null,$config=null){}
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
+        $target = function_exists('wr_host_only') ? wr_host_only($target) : $target; // DNS names have no :port / brackets
         $records = @dns_get_record($target, DNS_MX) ?: [];
         $out = [];
         foreach ($records as $r) {

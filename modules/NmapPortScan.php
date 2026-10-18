@@ -5,6 +5,7 @@ class NmapPortScan {
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
         $host = preg_replace('#^https?://#', '', $target);
         $host = explode('/', $host)[0];
+        $host = function_exists('wr_host_only') ? wr_host_only($host) : $host; // nmap targets take no :port suffix
         $args = $depth === '3' ? '-sV -Pn' : '-F -Pn';
         $cmd = 'timeout 180 nmap ' . $args . ' ' . escapeshellarg($host) . ' 2>&1';
         $raw = trim((string)@shell_exec($cmd));

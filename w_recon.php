@@ -40,6 +40,11 @@ foreach (['sqlite3','sockets','pcntl'] as $ext) {
 
 // Non-interactive mode
 $opts = CommandHandler::parseArgs($argv);
+if ($opts['errors']) {
+    foreach ($opts['errors'] as $e) $logger->error($e);
+    CommandHandler::printHelp();
+    exit(2);
+}
 if ($opts['help']) { CommandHandler::printHelp(); exit(0); }
 if ($opts['target']) {
     $t = InputHandler::sanitizeTarget($opts['target']);
@@ -52,7 +57,9 @@ if ($opts['target']) {
         if (!$custom) { $logger->error("No valid modules in --modules. Valid: " . implode(',', $valid)); exit(1); }
         $ctype = 'F';
     }
-    runScan($t, $opts['scheme'], $ctype, $opts['depth'], $opts['proxy'] ? 'proxy' : null, $opts['export'], $custom);
+    // Type F with no modules used to "succeed" running 0 modules and saving an empty scan.
+    if ($ctype === 'F' && !$custom) { $logger->error("Scan type F (Custom) requires --modules=a,b,c. Valid: " . implode(',', array_keys(Scanner::$MODULE_FILES))); exit(1); }
+    runScan($t, $opts['scheme'], $ctype, $opts['depth'], $opts['proxy'] ? 'proxy' : null, $opts['export'], $custom, false);
     exit(0);
 }
 
@@ -64,6 +71,8 @@ $menu->displayHeader();
 while (true) {
     $menu->displayMainMenu();
     $choice = trim(InputHandler::getInput(color("Select option (1-5): ", 'bright_yellow')));
+    // EOF (Ctrl-D / closed stdin) used to spin this loop forever printing menus.
+    if (InputHandler::isEof()) { $logger->success("Thank you for using Web-Recon. Goodbye!"); exit(0); }
     switch ($choice) {
         case '1': handleNewScan(); break;
         case '2': handleLoadResults(); break;
@@ -114,10 +123,16 @@ function handleNewScan(): void {
     runScan($target, $scheme, $type, $depth, null, null, $custom);
 }
 
-function runScan(string $target, string $scheme, string $type, string $depth, ?string $proxyNote = null, ?string $autoExport = null, array $custom = []): void {
+function runScan(string $target, string $scheme, string $type, string $depth, ?string $proxyNote = null, ?string $autoExport = null, array $custom = [], bool $interactive = true): void {
     global $logger, $config;
     $scanner = new Scanner($logger, $config);
-    $results = $scanner->executeScan($target, $scheme, $type, $depth, $custom);
+    try {
+        $results = $scanner->executeScan($target, $scheme, $type, $depth, $custom);
+    } catch (Throwable $e) {
+        $logger->error("Scan aborted: " . $e->getMessage());
+        if (!$interactive) exit(1);
+        return;
+    }
     TerminalDisplay::render($results);
 
     // Persist: DB + auto JSON snapshot
@@ -129,7 +144,16 @@ function runScan(string $target, string $scheme, string $type, string $depth, ?s
     $jsonFile = JSONExporter::export($results, $target);
     $logger->success("Snapshot: $jsonFile");
 
-    if ($autoExport) { handleExportOptions($results, $target, $autoExport); return; }
+    if ($autoExport) {
+        // The snapshot above already IS the JSON export — don't write it twice.
+        if ($autoExport === 'json') { $logger->success("Exported (json): $jsonFile"); return; }
+        handleExportOptions($results, $target, $autoExport);
+        return;
+    }
+    // Only prompt in interactive mode. Non-interactive (--target) runs used to
+    // block on an "Export report?" prompt, and on closed stdin the default-YES
+    // cascade silently produced an extra export the user never asked for.
+    if (!$interactive) return;
     if (InputHandler::confirm(color("\nExport report?", 'bright_yellow'), true)) handleExportOptions($results, $target);
 }
 
@@ -188,7 +212,7 @@ function handleLoadResults(): void {
 function handleDocumentation(): void {
     echo color("\nWeb-Recon 1.0 — Quick Docs\n", 'bright_green');
     echo color("Author: cbotrtx. For authorized testing only.\n\n", 'cyan');
-    echo "  Scan types: A=Basic B=Infra C=Tech D=Security E=API F=Custom G=Full\n";
+    echo "  Scan types: A=Basic B=Infra C=Tech D=Security E=API F=Custom G=Full H=RED HAWK\n";
     echo "  Depth: 1=Quick 2=Standard 3=Deep (controls ports/wordlist/probes)\n";
     echo "  Non-interactive: ./w_recon.php --target=example.com --type=G --depth=2 --export=json --modules=os,curl\n";
     echo "  API keys: set SHODAN_API_KEY / SECURITYTRAILS_API_KEY / HIBP_API_KEY env vars\n";

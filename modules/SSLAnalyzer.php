@@ -4,10 +4,13 @@ class SSLAnalyzer {
     public function __construct($client=null,$cache=null,$logger=null,$config=null){}
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
         if ($scheme!=='https') return ['note'=>'target uses HTTP; no TLS to analyze','target'=>$target];
-        $ctx = stream_context_create(['ssl'=>['capture_peer_cert'=>true,'verify_peer'=>false,'verify_peer_name'=>false,'SNI_enabled'=>true]]);
-        $out = ['host'=>$target,'port'=>443];
-        $s = @stream_socket_client("ssl://$target:443", $en, $es, 10, STREAM_CLIENT_CONNECT, $ctx);
-        if (!$s) return array_merge($out,['reachable'=>false,'error'=>"$es ($en)"]);
+        $host = function_exists('wr_host_only') ? wr_host_only($target) : $target;
+        $port = function_exists('wr_target_port') ? (wr_target_port($target) ?? 443) : 443; // was hardcoded 443 even for host:8443 targets
+        $addr = function_exists('wr_socket_host') ? wr_socket_host($host) : $host;
+        $ctx = stream_context_create(['ssl'=>['capture_peer_cert'=>true,'verify_peer'=>false,'verify_peer_name'=>false,'SNI_enabled'=>true,'peer_name'=>$host]]);
+        $out = ['host'=>$host,'port'=>$port];
+        $s = @stream_socket_client("ssl://$addr:$port", $en, $es, 10, STREAM_CLIENT_CONNECT, $ctx);
+        if (!$s) return array_merge($out,['reachable'=>false,'error'=>trim("$es ($en)") === '(0)' || trim("$es ($en)") === '' ? "TLS connection to $host:$port failed (no error detail from stream layer)" : "$es ($en)"]);
         $params = stream_context_get_params($ctx);
         $cert = $params['options']['ssl']['peer_certificate'] ?? null;
         $out['reachable']=true;
@@ -24,15 +27,16 @@ class SSLAnalyzer {
             $out['signature']=$info['signatureTypeSN']??null;
         }
         // Protocol support probe (best-effort)
-        $out['protocols']= $depth==='1' ? ['note'=>'skipped (quick scan)'] : $this->probeProtocols($target);
+        $out['protocols']= $depth==='1' ? ['note'=>'skipped (quick scan)'] : $this->probeProtocols($host, $port);
         @fclose($s);
         return $out;
     }
-    private function probeProtocols(string $host): array {
+    private function probeProtocols(string $host, int $port = 443): array {
         $res=[];
+        $addr = function_exists('wr_socket_host') ? wr_socket_host($host) : $host;
         foreach ([STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT=> 'TLSv1.2', STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT=>'TLSv1.3'] as $m=>$label) {
-            $ctx=stream_context_create(['ssl'=>['verify_peer'=>false,'verify_peer_name'=>false,'crypto_method'=>$m,'SNI_enabled'=>true]]);
-            $s=@stream_socket_client("ssl://$host:443",$en,$es,5,STREAM_CLIENT_CONNECT,$ctx);
+            $ctx=stream_context_create(['ssl'=>['verify_peer'=>false,'verify_peer_name'=>false,'crypto_method'=>$m,'SNI_enabled'=>true,'peer_name'=>$host]]);
+            $s=@stream_socket_client("ssl://$addr:$port",$en,$es,5,STREAM_CLIENT_CONNECT,$ctx);
             $res[$label]= $s!==false; if($s)@fclose($s);
         }
         return $res;

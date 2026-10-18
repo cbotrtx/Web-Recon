@@ -26,7 +26,8 @@ class DatabaseManager {
             return (int)$this->pdo->lastInsertId();
         }
         $all=file_exists($this->file)?(json_decode(file_get_contents($this->file),true)?:[]):[];
-        $id=count($all)+1;
+        // Next id is max+1, not count+1 — count collides after any deletion/gap.
+        $id=1; foreach($all as $r) $id=max($id,(int)($r['id']??0)+1);
         $all[]=array_merge(['id'=>$id],$meta,['results'=>$results]);
         @file_put_contents($this->file,json_encode($all));
         return $id;

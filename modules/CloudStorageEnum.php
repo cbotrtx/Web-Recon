@@ -4,7 +4,8 @@ class CloudStorageEnum {
     private $client;
     public function __construct($client=null,$cache=null,$logger=null,$config=null){ $this->client=$client; }
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
-        $base=explode('.',strtolower($target))[0];
+        $hostOnly = function_exists('wr_host_only') ? wr_host_only($target) : $target;
+        $base=explode('.',strtolower($hostOnly))[0];
         $cands=[
             "https://$base.s3.amazonaws.com","https://s3.amazonaws.com/$base",
             "https://$base.storage.googleapis.com","https://storage.googleapis.com/$base",

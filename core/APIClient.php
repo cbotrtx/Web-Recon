@@ -14,8 +14,9 @@ class APIClient {
         return defined('WR_DEFAULT_TIMEOUT') ? WR_DEFAULT_TIMEOUT : 15;
     }
     private function ua(): string {
-        if ($this->config && method_exists($this->config,'get')) return (string)$this->config->get('user_agent', WR_DEFAULT_UA);
-        return WR_DEFAULT_UA;
+        $default = defined('WR_DEFAULT_UA') ? WR_DEFAULT_UA : 'Web-Recon/1.0';
+        if ($this->config && method_exists($this->config,'get')) return (string)$this->config->get('user_agent', $default);
+        return $default;
     }
     private function proxy(): ?string {
         if ($this->config && method_exists($this->config,'get')) return $this->config->get('proxy');
@@ -50,7 +51,12 @@ class APIClient {
             $respHeaders = [];
             if ($includeHeaders) {
                 curl_setopt($ch, CURLOPT_HEADERFUNCTION, function($ch, $h) use (&$respHeaders) {
-                    $len = strlen($h); $parts = explode(':', $h, 2);
+                    $len = strlen($h);
+                    // A new status line starts a new response in a redirect chain:
+                    // reset so redirect-only headers (Location, Set-Cookie, …) from
+                    // an earlier hop don't leak into the final response's header set.
+                    if (preg_match('#^HTTP/\S+\s+\d{3}#', trim($h))) { $respHeaders = []; return $len; }
+                    $parts = explode(':', $h, 2);
                     if (count($parts) === 2) {
                         $name = strtolower(trim($parts[0]));
                         $value = trim($parts[1]);

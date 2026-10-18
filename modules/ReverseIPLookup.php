@@ -4,7 +4,8 @@ class ReverseIPLookup {
     private $client;
     public function __construct($client=null,$cache=null,$logger=null,$config=null){ $this->client=$client; }
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
-        $ip = filter_var($target, FILTER_VALIDATE_IP) ? $target : gethostbyname($target);
+        $host = function_exists('wr_host_only') ? wr_host_only($target) : $target;
+        $ip = filter_var($host, FILTER_VALIDATE_IP) ? $host : gethostbyname($host);
         $limit = $depth === '1' ? 5 : ($depth === '2' ? 10 : 20);
         $domains = [];
         $ch = curl_init('http://domains.yougetsignal.com/domains.php');

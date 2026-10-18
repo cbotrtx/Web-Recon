@@ -4,12 +4,17 @@ class SubdomainEnumerator {
     private $client; private $cache; private $logger; private $config;
     public function __construct($client=null,$cache=null,$logger=null,$config=null){ $this->client=$client;$this->cache=$cache;$this->logger=$logger;$this->config=$config; }
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
+        $target = function_exists('wr_host_only') ? wr_host_only($target) : $target;
         $key = "subs:$target:$depth";
         if ($this->cache && ($c=$this->cache->get($key))) return $c;
         $found = [];
+        $errors = [];
         $add = function(string $host, string $src, ?string $ip = null) use ($target, &$found) {
             $host = strtolower(trim($host, " \t*."));
-            if ($host === '' || (!str_ends_with($host, strtolower($target)))) return;
+            $t = strtolower($target);
+            // Require a real subdomain boundary: "evil-example.com" ends with the
+            // string "example.com" but is NOT a subdomain of it.
+            if ($host === '' || ($host !== $t && !str_ends_with($host, '.' . $t))) return;
             if (!isset($found[$host])) $found[$host] = ['source'=>$src];
             elseif (strpos($found[$host]['source'], $src) === false) $found[$host]['source'] .= ",$src";
             if ($ip && empty($found[$host]['ip'])) $found[$host]['ip'] = $ip;
@@ -19,7 +24,7 @@ class SubdomainEnumerator {
             $r = $this->client ? $this->client->get("https://crt.sh/?q=".urlencode('%'.$target)."&output=json") : ['body'=>''];
             $j = json_decode($r['body'] ?? '', true);
             if (is_array($j)) foreach ($j as $row) foreach (explode("\n", $row['name_value'] ?? '') as $n) $add($n, 'crt.sh');
-        } catch (Throwable $e) { $found['__ct_error'] = ['source'=>'error','msg'=>$e->getMessage()]; }
+        } catch (Throwable $e) { $errors['crt.sh'] = $e->getMessage(); }
         // 2) AlienVault OTX passive DNS (no key)
         try {
             $r = $this->client ? $this->client->get("https://otx.alienvault.com/api/v1/indicators/domain/".urlencode($target)."/passive_dns") : ['body'=>''];
@@ -54,10 +59,11 @@ class SubdomainEnumerator {
         foreach (array_slice($wl, 0, $limit) as $w) { $h = "$w.$target"; if (!isset($found[$h])) $chall[] = $h; }
         $alive = $this->resolveMany($chall);
         foreach ($alive as $h=>$ip) $found[$h] = ['source'=>'bruteforce','ip'=>$ip];
-        $subs = array_filter(array_keys($found), fn($k)=>!str_starts_with($k,'__'));
+        $subs = array_keys($found);
         $bySource = [];
         foreach ($subs as $s) foreach (explode(',', $found[$s]['source']) as $src) $bySource[$src] = ($bySource[$src] ?? 0) + 1;
         $out = ['domain'=>$target,'count'=>count($subs),'by_source'=>$bySource,'subdomains'=>$found,'wordlist_tried'=>min($limit,count($wl))];
+        if ($errors) $out['source_errors'] = $errors;
         if ($this->cache) $this->cache->set($key,$out);
         return $out;
     }

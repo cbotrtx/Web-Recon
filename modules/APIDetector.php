@@ -11,8 +11,11 @@ class APIDetector {
         $found=[];
         foreach($res as $u=>$r){
             $code=$r['code']??0; $b=substr((string)($r['body']??''),0,3000);
-            $isApi = in_array($code,[200,201,401,403]) && (stripos($b,'swagger')!==false||stripos($b,'openapi')!==false||stripos($b,'graphql')!==false||stripos($b,'"paths"')!==false||stripos($b,'rest')!==false||str_starts_with(trim($b),'{')||str_starts_with(trim($b),'['));
-            if($isApi||in_array($code,[200,401,403])) {
+            // Fixed false positives: the old condition OR'd in "any 200/401/403",
+            // which made $isApi meaningless and flagged plain HTML pages as APIs;
+            // and the 'rest' substring matched ordinary words like "interest".
+            $isApi = in_array($code,[200,201,401,403]) && (stripos($b,'swagger')!==false||stripos($b,'openapi')!==false||stripos($b,'graphql')!==false||stripos($b,'"paths"')!==false||str_starts_with(trim($b),'{')||str_starts_with(trim($b),'['));
+            if($isApi) {
                 $type='unknown';
                 if(stripos($b,'swagger')!==false||stripos($b,'openapi')!==false)$type='swagger/openapi';
                 elseif(stripos($b,'graphql')!==false)$type='graphql';

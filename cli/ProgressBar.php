@@ -2,6 +2,7 @@
 /**
  * Web-Recon: CLI progress bar
  */
+if (!function_exists('color')) require_once __DIR__ . '/../colors.php';
 class ProgressBar {
     private $total; private $current = 0; private $label; private $width;
     public function __construct(int $total, string $label = 'Scanning', int $width = 40) {

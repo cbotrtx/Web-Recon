@@ -2,6 +2,7 @@
 /**
  * Web-Recon: Logger with colored CLI output + file logging
  */
+if (!function_exists('color')) require_once __DIR__ . '/../colors.php';
 class Logger {
     private $logFile;
     private $verbose;

@@ -6,7 +6,8 @@ class OSDetector {
     public function scan(string $target, string $scheme='https', string $depth='2'): array {
         $key = "os:$target";
         if ($this->cache && ($c=$this->cache->get($key))) return $c;
-        $ip = filter_var($target, FILTER_VALIDATE_IP) ? $target : gethostbyname($target);
+        $hostOnly = function_exists('wr_host_only') ? wr_host_only($target) : $target;
+        $ip = filter_var($hostOnly, FILTER_VALIDATE_IP) ? $hostOnly : gethostbyname($hostOnly);
         $signals = [];
         $votes = [];
         $add = function(string $os, int $w, string $why) use (&$votes, &$signals) {
@@ -15,7 +16,7 @@ class OSDetector {
         };
         $out = ['target'=>$target,'ip'=>$ip];
         // 1) ICMP TTL (initial TTL 64=Linux/Unix, 128=Windows, 255=network gear/Solaris; degrades over hops)
-        $ttl = $this->pingTTL($target);
+        $ttl = $this->pingTTL($hostOnly);
         $out['icmp_ttl'] = $ttl;
         if ($ttl !== null) {
             if ($ttl <= 64) $add('Linux/Unix-like', 2, "ICMP TTL=$ttl (near 64)");
@@ -67,7 +68,8 @@ class OSDetector {
         $out['guesses'] = array_slice($guesses, 0, 4);
         $out['best_guess'] = $guesses[0]['os'];
         $out['disclaimer'] = 'Passive heuristics only: TTL degrades over hops and CDNs hide the origin. Confirm with authorized active fingerprinting.';
-        if ($this->cache) $this->cache->set($key,$out);
+        // Don't cache "Unknown" — one signal-free run used to block re-probing for the whole TTL.
+        if ($this->cache && !str_starts_with($out['best_guess'], 'Unknown')) $this->cache->set($key,$out);
         return $out;
     }
     private function pingTTL(string $host): ?int {
@@ -77,8 +79,9 @@ class OSDetector {
     }
     private function tcpGrab(string $ip, array $ports, float $timeout): array {
         $res = [];
+        $addr = function_exists('wr_socket_host') ? wr_socket_host($ip) : $ip;
         foreach ($ports as $p) {
-            $s = @stream_socket_client("tcp://$ip:$p", $en, $es, $timeout, STREAM_CLIENT_CONNECT);
+            $s = @stream_socket_client("tcp://$addr:$p", $en, $es, $timeout, STREAM_CLIENT_CONNECT);
             if (!$s) continue;
             @stream_set_timeout($s, (int)max(1,$timeout));
             $d = @fread($s, 256);

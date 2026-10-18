@@ -18,7 +18,40 @@ define('WR_DATA_DIR', WR_BASE . '/data');
 
 define('WR_DEFAULT_TIMEOUT', 15);
 define('WR_DEFAULT_UA', 'Mozilla/5.0 (X11; Linux x86_64) Web-Recon/1.0 (Security Research; +https://github.com/cbotrtx)');
-define('WR_MIN_PHP', '7.4.0');
+define('WR_MIN_PHP', '8.0.0'); // code uses PHP 8.0+ features: str_contains/str_starts_with/str_ends_with, match expressions
+
+if (!function_exists('wr_host_only')) {
+    /** Bare host for DNS/socket lookups: strips [IPv6] brackets and any :port suffix from a scan target. */
+    function wr_host_only(string $target): string {
+        $t = trim($target);
+        if (str_starts_with($t, '[')) {
+            $end = strpos($t, ']');
+            if ($end !== false) return substr($t, 1, $end - 1);
+        }
+        // Bare IPv6 without brackets or port: contains more than one colon — leave intact.
+        if (substr_count($t, ':') === 1) $t = explode(':', $t)[0];
+        return $t;
+    }
+}
+if (!function_exists('wr_target_port')) {
+    /** Explicit :port from a scan target (example.com:8080 / [::1]:8080), or null when absent. */
+    function wr_target_port(string $target): ?int {
+        $t = trim($target);
+        if (str_starts_with($t, '[')) {
+            $end = strpos($t, ']');
+            if ($end !== false && preg_match('/:(\d{1,5})$/', substr($t, $end + 1), $m)) return (int)$m[1];
+            return null;
+        }
+        if (substr_count($t, ':') === 1 && preg_match('/:(\d{1,5})$/', $t, $m)) return (int)$m[1];
+        return null;
+    }
+}
+if (!function_exists('wr_socket_host')) {
+    /** Host formatted for tcp:// / ssl:// stream addresses (brackets IPv6 literals). */
+    function wr_socket_host(string $host): string {
+        return str_contains($host, ':') && !str_starts_with($host, '[') ? "[$host]" : $host;
+    }
+}
 
 // Scan depth presets: max ports, wordlist limits, timeouts
 $WR_DEPTH_PRESETS = [
@@ -31,7 +64,7 @@ $WR_DEPTH_PRESETS = [
 $WR_TOP_PORTS = [21,22,23,25,53,80,110,111,135,139,143,443,445,993,995,1723,3306,3389,5900,8080];
 
 // Extended list for standard/deep (top 100 subset for speed)
-$WR_EXTENDED_PORTS = [21,22,23,25,53,80,81,110,111,135,139,143,179,199,443,445,514,515,548,587,593,636,771,789,873,990,993,995,1025,1080,1433,1521,1723,2049,2082,2083,2086,2087,2095,2096,2222,2375,2376,27017,3000,3306,3389,4369,5000,5001,5060,5432,5631,5666,5672,5900,5984,6000,6379,6443,6666,6667,7001,8000,8001,8008,8042,8080,8081,8083,8088,8090,8443,8888,9000,9001,9042,9100,9200,9300,10000,11211,27017,27018,50070,61616];
+$WR_EXTENDED_PORTS = [21,22,23,25,53,80,81,110,111,135,139,143,179,199,443,445,514,515,548,587,593,636,771,789,873,990,993,995,1025,1080,1433,1521,1723,2049,2082,2083,2086,2087,2095,2096,2222,2375,2376,27017,3000,3306,3389,4369,5000,5001,5060,5432,5631,5666,5672,5900,5984,6000,6379,6443,6666,6667,7001,8000,8001,8008,8042,8080,8081,8083,8088,8090,8443,8888,9000,9001,9042,9100,9200,9300,10000,11211,27017,27018,50070,61616,9929,31337];
 
 foreach ([WR_RESULTS, WR_LOGS, WR_CACHE_DIR] as $d) {
     if (!is_dir($d)) @mkdir($d, 0755, true);

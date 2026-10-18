@@ -79,12 +79,15 @@ class Scanner {
     public function modulesFor(string $type, array $custom = []): array {
         $type = strtoupper($type);
         if ($type === 'F') return $custom;
-        return self::$SCAN_MAP[$type] ?? self::$SCAN_MAP['G'];
+        // Unknown types used to fall back to the full G audit — a typo must never widen a scan.
+        if (!isset(self::$SCAN_MAP[$type])) throw new InvalidArgumentException("Unknown scan type '$type' (expected A-H)");
+        return self::$SCAN_MAP[$type];
     }
 
     public function executeScan(string $target, string $scheme, string $scanType, string $depth, array $custom = []): array {
         $scanType = strtoupper($scanType);
         $modules = $this->modulesFor($scanType, $custom);
+        if (!$modules) throw new InvalidArgumentException("Scan type $scanType selected no modules — for type F pass at least one module via --modules");
         $started = date('Y-m-d H:i:s');
         $this->logger->section("Running " . count($modules) . " modules against $scheme://$target (depth $depth)");
         $bar = new ProgressBar(count($modules), 'Progress');
@@ -110,6 +113,26 @@ class Scanner {
         }
         $results['_meta']['finished'] = date('Y-m-d H:i:s');
         $results['_meta']['duration_s'] = strtotime($results['_meta']['finished']) - strtotime($started);
+        // Dead-scheme guard: if every web module that ran got HTTP code 0, the
+        // target almost certainly does not speak the chosen scheme (e.g. an
+        // HTTPS scan of an HTTP-only host). Warn loudly instead of presenting
+        // the empty results as findings. Modules expose their code under
+        // different keys (http_code / probe_code / baseline_404_code).
+        if ($scheme === 'https') {
+            $ran = 0; $dead = 0;
+            foreach (['tech','headers','waf','urls','api','js'] as $m) {
+                if (!isset($results[$m]) || !is_array($results[$m])) continue;
+                $code = $results[$m]['http_code'] ?? $results[$m]['probe_code'] ?? $results[$m]['baseline_404_code'] ?? null;
+                if ($code === null) continue;
+                $ran++;
+                if ((int)$code === 0) $dead++;
+            }
+            if ($ran > 0 && $dead === $ran) {
+                $warn = "All $ran web modules returned HTTP code 0 — $target looks HTTP-only; rerun with --scheme=http for real results.";
+                $results['_warnings'][] = $warn;
+                $this->logger->warning("⚠  $warn");
+            }
+        }
         return $results;
     }
 }
